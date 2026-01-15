@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import { projects, formatCurrency } from "@/lib/data";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   Table,
   TableBody,
@@ -19,13 +20,35 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Search } from "lucide-react";
+import { Search, X } from "lucide-react";
 import Link from "next/link";
 
 export default function ProjectsPage() {
   const [search, setSearch] = useState("");
   const [labelFilter, setLabelFilter] = useState<string>("all");
   const [statusFilter, setStatusFilter] = useState<string>("all");
+  const [stateFilter, setStateFilter] = useState<string>("all");
+  const [customerFilter, setCustomerFilter] = useState<string>("all");
+
+  // Get unique states from project names
+  const states = useMemo(() => {
+    const stateSet = new Set<string>();
+    const statePattern = /\b(AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT|VT|VA|WA|WV|WI|WY)\b/;
+    projects.forEach((p) => {
+      const match = p.projectName.match(statePattern);
+      if (match) stateSet.add(match[1]);
+    });
+    return Array.from(stateSet).sort();
+  }, []);
+
+  // Get unique customers
+  const customers = useMemo(() => {
+    const customerSet = new Set<string>();
+    projects.forEach((p) => {
+      if (p.customer) customerSet.add(p.customer);
+    });
+    return Array.from(customerSet).sort();
+  }, []);
 
   const filteredProjects = useMemo(() => {
     return projects.filter((project) => {
@@ -47,9 +70,27 @@ export default function ProjectsPage() {
         (statusFilter === "none" && !project.colorStatus) ||
         project.colorStatus?.includes(statusFilter);
 
-      return matchesSearch && matchesLabel && matchesStatus;
+      const matchesState =
+        stateFilter === "all" ||
+        project.projectName.includes(stateFilter);
+
+      const matchesCustomer =
+        customerFilter === "all" ||
+        project.customer === customerFilter;
+
+      return matchesSearch && matchesLabel && matchesStatus && matchesState && matchesCustomer;
     });
-  }, [search, labelFilter, statusFilter]);
+  }, [search, labelFilter, statusFilter, stateFilter, customerFilter]);
+
+  const clearFilters = () => {
+    setSearch("");
+    setLabelFilter("all");
+    setStatusFilter("all");
+    setStateFilter("all");
+    setCustomerFilter("all");
+  };
+
+  const hasActiveFilters = search || labelFilter !== "all" || statusFilter !== "all" || stateFilter !== "all" || customerFilter !== "all";
 
   const getLabelBadgeVariant = (label: string | null) => {
     switch (label) {
@@ -82,41 +123,77 @@ export default function ProjectsPage() {
         </p>
       </div>
 
-      <div className="flex flex-col sm:flex-row gap-4">
-        <div className="relative flex-1">
-          <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-          <Input
-            placeholder="Search by project, customer, or location..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            className="pl-10"
-          />
+      <div className="space-y-4">
+        <div className="flex flex-col sm:flex-row gap-4">
+          <div className="relative flex-1">
+            <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+            <Input
+              placeholder="Search by project, customer, or location..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="pl-10"
+            />
+          </div>
+          {hasActiveFilters && (
+            <Button variant="ghost" onClick={clearFilters} className="gap-2">
+              <X className="h-4 w-4" />
+              Clear Filters
+            </Button>
+          )}
         </div>
-        <Select value={labelFilter} onValueChange={setLabelFilter}>
-          <SelectTrigger className="w-full sm:w-[200px]">
-            <SelectValue placeholder="Filter by label" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">All Labels</SelectItem>
-            <SelectItem value="2025 Active project">Active Project</SelectItem>
-            <SelectItem value="2025 Active Bid">Active Bid</SelectItem>
-            <SelectItem value="2025 New Lead">New Lead</SelectItem>
-            <SelectItem value="none">No Label</SelectItem>
-          </SelectContent>
-        </Select>
-        <Select value={statusFilter} onValueChange={setStatusFilter}>
-          <SelectTrigger className="w-full sm:w-[200px]">
-            <SelectValue placeholder="Filter by color status" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">All Statuses</SelectItem>
-            <SelectItem value="Quotation">Yellow - Quotation</SelectItem>
-            <SelectItem value="Already Quoted">Green - Already Quoted</SelectItem>
-            <SelectItem value="Needs Clarification">Red - Needs Clarification</SelectItem>
-            <SelectItem value="Ongoing Project">Brown - Ongoing Project</SelectItem>
-            <SelectItem value="none">No Color Status</SelectItem>
-          </SelectContent>
-        </Select>
+        <div className="flex flex-wrap gap-2">
+          <Select value={labelFilter} onValueChange={setLabelFilter}>
+            <SelectTrigger className="w-[160px]">
+              <SelectValue placeholder="Label" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">All Labels</SelectItem>
+              <SelectItem value="2025 Active project">Active Project</SelectItem>
+              <SelectItem value="2025 Active Bid">Active Bid</SelectItem>
+              <SelectItem value="2025 New Lead">New Lead</SelectItem>
+              <SelectItem value="none">No Label</SelectItem>
+            </SelectContent>
+          </Select>
+          <Select value={statusFilter} onValueChange={setStatusFilter}>
+            <SelectTrigger className="w-[180px]">
+              <SelectValue placeholder="Color Status" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">All Statuses</SelectItem>
+              <SelectItem value="Quotation">Yellow - Quotation</SelectItem>
+              <SelectItem value="Already Quoted">Green - Already Quoted</SelectItem>
+              <SelectItem value="Needs Clarification">Red - Needs Clarification</SelectItem>
+              <SelectItem value="Ongoing Project">Brown - Ongoing Project</SelectItem>
+              <SelectItem value="none">No Color Status</SelectItem>
+            </SelectContent>
+          </Select>
+          <Select value={stateFilter} onValueChange={setStateFilter}>
+            <SelectTrigger className="w-[140px]">
+              <SelectValue placeholder="State" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">All States</SelectItem>
+              {states.map((state) => (
+                <SelectItem key={state} value={state}>
+                  {state}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+          <Select value={customerFilter} onValueChange={setCustomerFilter}>
+            <SelectTrigger className="w-[200px]">
+              <SelectValue placeholder="Customer" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">All Customers</SelectItem>
+              {customers.slice(0, 50).map((customer) => (
+                <SelectItem key={customer} value={customer}>
+                  {customer.length > 25 ? customer.slice(0, 25) + "..." : customer}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
       </div>
 
       <div className="rounded-md border">

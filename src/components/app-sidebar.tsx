@@ -11,7 +11,15 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import { LayoutDashboard, FolderKanban, Settings, Building2 } from "lucide-react";
+import { 
+  LayoutDashboard, 
+  FolderKanban, 
+  Settings, 
+  Building2,
+  Columns3,
+  BarChart3,
+  Users,
+} from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -22,9 +30,24 @@ const menuItems = [
     icon: LayoutDashboard,
   },
   {
+    title: "Kanban Board",
+    url: "/kanban",
+    icon: Columns3,
+  },
+  {
     title: "Projects",
     url: "/projects",
     icon: FolderKanban,
+  },
+  {
+    title: "Customers",
+    url: "/customers",
+    icon: Users,
+  },
+  {
+    title: "Analytics",
+    url: "/analytics",
+    icon: BarChart3,
   },
   {
     title: "Settings",

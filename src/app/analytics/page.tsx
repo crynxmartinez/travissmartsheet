@@ -237,10 +237,7 @@ export default function AnalyticsPage() {
                     tickFormatter={(value) => `$${(value / 1000).toFixed(0)}k`}
                   />
                   <YAxis dataKey="state" type="category" width={35} />
-                  <Tooltip 
-                    formatter={(value: number) => formatCurrency(value)}
-                    contentStyle={{ borderRadius: "8px" }}
-                  />
+                  <Tooltip contentStyle={{ borderRadius: "8px" }} />
                   <Bar dataKey="value" fill="#3b82f6" radius={[0, 4, 4, 0]} />
                 </BarChart>
               </ResponsiveContainer>
@@ -291,9 +288,6 @@ export default function AnalyticsPage() {
                 <YAxis yAxisId="left" orientation="left" />
                 <YAxis yAxisId="right" orientation="right" tickFormatter={(v) => `$${(v/1000).toFixed(0)}k`} />
                 <Tooltip 
-                  formatter={(value: number, name: string) => 
-                    name === "quoteValue" ? formatCurrency(value) : value
-                  }
                   contentStyle={{ borderRadius: "8px" }}
                 />
                 <Bar yAxisId="left" dataKey="projects" fill="#3b82f6" name="Projects" radius={[4, 4, 0, 0]} />

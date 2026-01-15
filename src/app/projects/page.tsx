@@ -25,7 +25,7 @@ import Link from "next/link";
 export default function ProjectsPage() {
   const [search, setSearch] = useState("");
   const [labelFilter, setLabelFilter] = useState<string>("all");
-  const [depositFilter, setDepositFilter] = useState<string>("all");
+  const [statusFilter, setStatusFilter] = useState<string>("all");
 
   const filteredProjects = useMemo(() => {
     return projects.filter((project) => {
@@ -38,17 +38,18 @@ export default function ProjectsPage() {
 
       const matchesLabel =
         labelFilter === "all" ||
-        (labelFilter === "none" && !project.projectLabel) ||
-        project.projectLabel === labelFilter;
+        (labelFilter === "none" && !project.projectLabel && !project.colorStatus) ||
+        project.projectLabel === labelFilter ||
+        project.colorStatus?.includes(labelFilter);
 
-      const matchesDeposit =
-        depositFilter === "all" ||
-        (depositFilter === "none" && !project.depositPaid) ||
-        project.depositPaid === depositFilter;
+      const matchesStatus =
+        statusFilter === "all" ||
+        (statusFilter === "none" && !project.colorStatus) ||
+        project.colorStatus?.includes(statusFilter);
 
-      return matchesSearch && matchesLabel && matchesDeposit;
+      return matchesSearch && matchesLabel && matchesStatus;
     });
-  }, [search, labelFilter, depositFilter]);
+  }, [search, labelFilter, statusFilter]);
 
   const getLabelBadgeVariant = (label: string | null) => {
     switch (label) {
@@ -63,15 +64,13 @@ export default function ProjectsPage() {
     }
   };
 
-  const getDepositBadgeVariant = (deposit: string | null) => {
-    switch (deposit) {
-      case "Paid":
-        return "default";
-      case "Not Paid":
-        return "destructive";
-      default:
-        return "outline";
-    }
+  const getColorStatusBadgeVariant = (status: string | null): "default" | "secondary" | "destructive" | "outline" => {
+    if (!status) return "outline";
+    if (status.includes("Yellow") || status.includes("Quotation")) return "secondary";
+    if (status.includes("Green") || status.includes("Already Quoted")) return "default";
+    if (status.includes("Red") || status.includes("Needs Clarification")) return "destructive";
+    if (status.includes("Brown") || status.includes("Ongoing")) return "default";
+    return "outline";
   };
 
   return (
@@ -105,15 +104,17 @@ export default function ProjectsPage() {
             <SelectItem value="none">No Label</SelectItem>
           </SelectContent>
         </Select>
-        <Select value={depositFilter} onValueChange={setDepositFilter}>
-          <SelectTrigger className="w-full sm:w-[180px]">
-            <SelectValue placeholder="Filter by deposit" />
+        <Select value={statusFilter} onValueChange={setStatusFilter}>
+          <SelectTrigger className="w-full sm:w-[200px]">
+            <SelectValue placeholder="Filter by color status" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="all">All Deposits</SelectItem>
-            <SelectItem value="Paid">Paid</SelectItem>
-            <SelectItem value="Not Paid">Not Paid</SelectItem>
-            <SelectItem value="none">No Status</SelectItem>
+            <SelectItem value="all">All Statuses</SelectItem>
+            <SelectItem value="Quotation">Yellow - Quotation</SelectItem>
+            <SelectItem value="Already Quoted">Green - Already Quoted</SelectItem>
+            <SelectItem value="Needs Clarification">Red - Needs Clarification</SelectItem>
+            <SelectItem value="Ongoing Project">Brown - Ongoing Project</SelectItem>
+            <SelectItem value="none">No Color Status</SelectItem>
           </SelectContent>
         </Select>
       </div>
@@ -124,17 +125,14 @@ export default function ProjectsPage() {
             <TableRow>
               <TableHead>Project Name</TableHead>
               <TableHead>Customer</TableHead>
-              <TableHead>Location</TableHead>
-              <TableHead>Label</TableHead>
+              <TableHead>Label / Status</TableHead>
               <TableHead>Quote (w/ Tax)</TableHead>
-              <TableHead>Deposit</TableHead>
-              <TableHead>Job Status</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {filteredProjects.length === 0 ? (
               <TableRow>
-                <TableCell colSpan={7} className="text-center py-8">
+                <TableCell colSpan={4} className="text-center py-8">
                   No projects found
                 </TableCell>
               </TableRow>
@@ -150,34 +148,23 @@ export default function ProjectsPage() {
                     </Link>
                   </TableCell>
                   <TableCell>{project.customer || "—"}</TableCell>
-                  <TableCell>{project.location || "—"}</TableCell>
                   <TableCell>
-                    {project.projectLabel ? (
-                      <Badge variant={getLabelBadgeVariant(project.projectLabel)}>
-                        {project.projectLabel.replace("2025 ", "")}
-                      </Badge>
-                    ) : (
-                      "—"
-                    )}
+                    <div className="flex flex-wrap gap-1">
+                      {project.projectLabel && (
+                        <Badge variant={getLabelBadgeVariant(project.projectLabel)}>
+                          {project.projectLabel.replace("2025 ", "")}
+                        </Badge>
+                      )}
+                      {project.colorStatus && (
+                        <Badge variant={getColorStatusBadgeVariant(project.colorStatus)}>
+                          {project.colorStatus.split(" - ")[0]}
+                        </Badge>
+                      )}
+                      {!project.projectLabel && !project.colorStatus && "—"}
+                    </div>
                   </TableCell>
                   <TableCell>
                     {formatCurrency(project.ourQuoteWithTax)}
-                  </TableCell>
-                  <TableCell>
-                    {project.depositPaid ? (
-                      <Badge variant={getDepositBadgeVariant(project.depositPaid)}>
-                        {project.depositPaid}
-                      </Badge>
-                    ) : (
-                      "—"
-                    )}
-                  </TableCell>
-                  <TableCell>
-                    {project.jobStatus ? (
-                      <Badge variant="outline">{project.jobStatus}</Badge>
-                    ) : (
-                      "—"
-                    )}
                   </TableCell>
                 </TableRow>
               ))

@@ -35,6 +35,7 @@ export interface Project {
   contractorStartDate: string | null;
   jobStatus: string | null;
   comments: string | null;
+  colorStatus: string | null;
 }
 
 export interface KPIData {
@@ -47,4 +48,8 @@ export interface KPIData {
   totalQuoteValue: number;
   projectsByLabel: { label: string; count: number }[];
   projectsByLocation: { location: string; count: number }[];
+  quotation: number;
+  alreadyQuoted: number;
+  needsClarification: number;
+  ongoingProjects: number;
 }

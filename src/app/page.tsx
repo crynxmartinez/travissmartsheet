@@ -8,6 +8,10 @@ import {
   DollarSign,
   TrendingUp,
   Wallet,
+  FileQuestion,
+  CheckCircle,
+  Clock,
+  Hammer,
 } from "lucide-react";
 
 export default function Dashboard() {
@@ -18,11 +22,11 @@ export default function Dashboard() {
       <div>
         <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
         <p className="text-muted-foreground">
-          Overview of your storage materials projects
+          Overview of your storage materials projects ({kpiData.totalProjects} total)
         </p>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         <KPICard
           title="Total Projects"
           value={kpiData.totalProjects}
@@ -47,6 +51,39 @@ export default function Dashboard() {
           description="In progress"
           icon={FileCheck}
         />
+      </div>
+
+      <div>
+        <h2 className="text-lg font-semibold mb-3">Status by Color Code</h2>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <KPICard
+            title="Quotation (Yellow)"
+            value={kpiData.quotation}
+            description="Pending quotation"
+            icon={Clock}
+          />
+          <KPICard
+            title="Already Quoted (Green)"
+            value={kpiData.alreadyQuoted}
+            description="Quote sent"
+            icon={CheckCircle}
+          />
+          <KPICard
+            title="Needs Clarification (Red)"
+            value={kpiData.needsClarification}
+            description="Requires follow-up"
+            icon={FileQuestion}
+          />
+          <KPICard
+            title="Ongoing Project (Brown)"
+            value={kpiData.ongoingProjects}
+            description="Currently active"
+            icon={Hammer}
+          />
+        </div>
+      </div>
+
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         <KPICard
           title="Quotes Accepted"
           value={kpiData.quotesAccepted}

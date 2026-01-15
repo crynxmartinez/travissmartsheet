@@ -36,6 +36,7 @@ export function KanbanCard({ project }: KanbanCardProps) {
     if (status.includes("Red")) return "bg-red-100 border-red-300";
     if (status.includes("Brown")) return "bg-amber-100 border-amber-300";
     if (status.includes("Purple")) return "bg-purple-100 border-purple-300";
+    if (status.includes("Orange")) return "bg-orange-100 border-orange-300";
     return "bg-gray-100";
   };
 

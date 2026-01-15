@@ -1,9 +1,6 @@
 "use client";
 
 import {
-  PieChart,
-  Pie,
-  Cell,
   BarChart,
   Bar,
   XAxis,
@@ -11,12 +8,11 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
+  Cell,
 } from "recharts";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#8884d8", "#82ca9d"];
-
-interface PieChartData {
+interface LabelChartData {
   label: string;
   count: number;
   [key: string]: string | number;
@@ -27,38 +23,56 @@ interface BarChartData {
   count: number;
 }
 
-export function ProjectsByLabelChart({ data }: { data: PieChartData[] }) {
+const STATUS_COLORS: Record<string, string> = {
+  "Green - Already Quoted": "#22c55e",
+  "Brown - Ongoing Project": "#a16207",
+  "Yellow - Quotation": "#eab308",
+  "Red - Needs Clarification": "#ef4444",
+  "Purple/Pink": "#a855f7",
+  "Orange": "#f97316",
+  "2025 New Lead": "#3b82f6",
+  "2025 Active Bid": "#6366f1",
+  "2025 Active project": "#14b8a6",
+  "No Status": "#94a3b8",
+};
+
+export function ProjectsByLabelChart({ data }: { data: LabelChartData[] }) {
+  // Sort by count descending and take top items
+  const sortedData = [...data]
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 8);
+
   return (
-    <Card className="col-span-1">
-      <CardHeader>
-        <CardTitle className="text-base">Projects by Label</CardTitle>
+    <Card>
+      <CardHeader className="pb-2">
+        <CardTitle className="text-base">Projects by Status</CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="h-[300px]">
+        <div className="h-[280px]">
           <ResponsiveContainer width="100%" height="100%">
-            <PieChart>
-              <Pie
-                data={data}
-                cx="50%"
-                cy="50%"
-                labelLine={false}
-                label={({ name, percent }) =>
-                  `${name} (${((percent ?? 0) * 100).toFixed(0)}%)`
-                }
-                outerRadius={80}
-                fill="#8884d8"
-                dataKey="count"
-                nameKey="label"
-              >
-                {data.map((_, index) => (
-                  <Cell
-                    key={`cell-${index}`}
-                    fill={COLORS[index % COLORS.length]}
+            <BarChart
+              data={sortedData}
+              layout="vertical"
+              margin={{ top: 5, right: 30, left: 120, bottom: 5 }}
+            >
+              <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false} />
+              <XAxis type="number" />
+              <YAxis 
+                dataKey="label" 
+                type="category" 
+                width={110}
+                tick={{ fontSize: 12 }}
+              />
+              <Tooltip contentStyle={{ borderRadius: "8px" }} />
+              <Bar dataKey="count" radius={[0, 4, 4, 0]}>
+                {sortedData.map((entry, index) => (
+                  <Cell 
+                    key={`cell-${index}`} 
+                    fill={STATUS_COLORS[entry.label] || "#64748b"} 
                   />
                 ))}
-              </Pie>
-              <Tooltip />
-            </PieChart>
+              </Bar>
+            </BarChart>
           </ResponsiveContainer>
         </div>
       </CardContent>
@@ -67,24 +81,31 @@ export function ProjectsByLabelChart({ data }: { data: PieChartData[] }) {
 }
 
 export function ProjectsByLocationChart({ data }: { data: BarChartData[] }) {
+  const sortedData = [...data].sort((a, b) => b.count - a.count).slice(0, 10);
+  
   return (
-    <Card className="col-span-1 lg:col-span-2">
-      <CardHeader>
-        <CardTitle className="text-base">Projects by Location (Top 10)</CardTitle>
+    <Card>
+      <CardHeader className="pb-2">
+        <CardTitle className="text-base">Projects by State</CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="h-[300px]">
+        <div className="h-[280px]">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart
-              data={data}
+              data={sortedData}
               layout="vertical"
-              margin={{ top: 5, right: 30, left: 80, bottom: 5 }}
+              margin={{ top: 5, right: 30, left: 40, bottom: 5 }}
             >
-              <CartesianGrid strokeDasharray="3 3" />
+              <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false} />
               <XAxis type="number" />
-              <YAxis dataKey="location" type="category" width={70} />
-              <Tooltip />
-              <Bar dataKey="count" fill="#0088FE" radius={[0, 4, 4, 0]} />
+              <YAxis 
+                dataKey="location" 
+                type="category" 
+                width={35}
+                tick={{ fontSize: 12 }}
+              />
+              <Tooltip contentStyle={{ borderRadius: "8px" }} />
+              <Bar dataKey="count" fill="#3b82f6" radius={[0, 4, 4, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>

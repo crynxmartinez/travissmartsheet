@@ -1,9 +1,10 @@
 import { getProjectById, formatCurrency } from "@/lib/data";
+import { allDeals } from "@/lib/deals";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Mail, Phone, MapPin, Calendar, DollarSign } from "lucide-react";
+import { ArrowLeft, Mail, Phone, MapPin, Calendar, DollarSign, Flame, Sun, CircleDot, ClipboardList } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -18,6 +19,9 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
   if (!project) {
     notFound();
   }
+
+  // Find if this project is matched to a deal
+  const matchedDeal = allDeals.find(d => d.matchedProjectId === project.id);
 
   const getLabelBadgeVariant = (label: string | null) => {
     switch (label) {
@@ -56,6 +60,51 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
           </div>
         </div>
       </div>
+
+      {matchedDeal && (
+        <Card className="border-l-4 border-l-blue-500">
+          <CardHeader className="pb-2">
+            <CardTitle className="text-base flex items-center gap-2">
+              <ClipboardList className="h-4 w-4" />
+              Deal Information
+              {matchedDeal.category === "active" && (
+                <Badge className="bg-blue-600 hover:bg-blue-700 ml-2">
+                  <CircleDot className="h-3 w-3 mr-1" />
+                  Active Deal
+                </Badge>
+              )}
+              {matchedDeal.category === "hot" && (
+                <Badge className="bg-orange-500 hover:bg-orange-600 ml-2">
+                  <Flame className="h-3 w-3 mr-1" />
+                  Hot Deal
+                </Badge>
+              )}
+              {matchedDeal.category === "warm" && (
+                <Badge className="bg-yellow-500 hover:bg-yellow-600 text-black ml-2">
+                  <Sun className="h-3 w-3 mr-1" />
+                  Warm Deal
+                </Badge>
+              )}
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div>
+                <p className="text-sm text-muted-foreground">Contact Person</p>
+                <p className="font-medium">{matchedDeal.contact || "—"}</p>
+              </div>
+              <div>
+                <p className="text-sm text-muted-foreground">Notes</p>
+                <p className="font-medium">{matchedDeal.notes || "—"}</p>
+              </div>
+              <div>
+                <p className="text-sm text-muted-foreground">Expected Start</p>
+                <p className="font-medium">{matchedDeal.expectedStart || "—"}</p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      )}
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         <Card>

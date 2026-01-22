@@ -22,7 +22,7 @@ interface KanbanBoardProps {
   projects: Project[];
 }
 
-type ColumnId = "new_lead" | "quoted" | "accepted" | "deposit_paid" | "in_progress" | "completed" | "needs_attention" | "no_status";
+type ColumnId = "unassigned" | "new_lead" | "quoted" | "accepted" | "deposit_paid" | "in_progress" | "completed" | "needs_attention" | "no_status";
 
 interface Column {
   id: ColumnId;
@@ -31,6 +31,7 @@ interface Column {
 }
 
 const columns: Column[] = [
+  { id: "unassigned", title: "Unassigned", color: "bg-gray-400 text-white" },
   { id: "new_lead", title: "New Lead", color: "bg-blue-500 text-white" },
   { id: "quoted", title: "Quoted", color: "bg-green-500 text-white" },
   { id: "needs_attention", title: "Needs Attention", color: "bg-red-500 text-white" },
@@ -57,15 +58,16 @@ function getProjectColumn(project: Project): ColumnId {
   // Check quote accepted
   if (project.quoteAcceptedDeclined?.toLowerCase() === "accepted") return "accepted";
   
-  // Default to new lead if has customer, otherwise no status
+  // Default to new lead if has customer, otherwise unassigned (grey)
   if (project.customer) return "new_lead";
   
-  return "new_lead";
+  return "unassigned";
 }
 
 export function KanbanBoard({ projects }: KanbanBoardProps) {
   // Initialize columns with projects
   const initialColumnProjects: Record<ColumnId, Project[]> = {
+    unassigned: [],
     new_lead: [],
     quoted: [],
     needs_attention: [],
@@ -167,6 +169,39 @@ export function KanbanBoard({ projects }: KanbanBoardProps) {
       onDragOver={handleDragOver}
       onDragEnd={handleDragEnd}
     >
+      <div className="mb-4 p-3 bg-muted rounded-lg">
+        <p className="text-sm font-medium mb-2">Card Color Legend (from Excel):</p>
+        <div className="flex flex-wrap gap-4 text-xs">
+          <div className="flex items-center gap-2">
+            <div className="w-3 h-3 rounded bg-gray-300 border border-gray-400"></div>
+            <span>No Status</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-3 h-3 rounded bg-yellow-300 border border-yellow-400"></div>
+            <span>Yellow - Quotation</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-3 h-3 rounded bg-green-300 border border-green-400"></div>
+            <span>Green - Already Quoted</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-3 h-3 rounded bg-red-300 border border-red-400"></div>
+            <span>Red - Needs Clarification</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-3 h-3 rounded bg-amber-300 border border-amber-400"></div>
+            <span>Brown - Ongoing Project</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-3 h-3 rounded bg-purple-300 border border-purple-400"></div>
+            <span>Purple/Pink</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-3 h-3 rounded bg-orange-300 border border-orange-400"></div>
+            <span>Orange</span>
+          </div>
+        </div>
+      </div>
       <div className="flex gap-4 overflow-x-auto pb-4">
         {columns.map((column) => (
           <KanbanColumn

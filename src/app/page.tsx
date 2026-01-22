@@ -1,6 +1,7 @@
 import { getKPIData, formatCurrency, projects } from "@/lib/data";
 import { KPICard } from "@/components/kpi-card";
 import { ProjectsByLabelChart, ProjectsByLocationChart } from "@/components/charts";
+import { FavoritesSection } from "@/components/favorites-section";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -124,7 +125,8 @@ export default function Dashboard() {
           <AlertCircle className="h-5 w-5 text-red-500" />
           <h2 className="text-lg font-semibold">Needs Attention</h2>
         </div>
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
+          <FavoritesSection />
           <Card className="border-l-4 border-l-red-500">
             <CardHeader className="pb-2">
               <CardTitle className="text-sm flex items-center justify-between">

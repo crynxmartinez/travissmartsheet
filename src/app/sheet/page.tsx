@@ -21,7 +21,9 @@ import {
   AlertTriangle,
   CheckCircle2,
   HelpCircle,
+  Star,
 } from "lucide-react";
+import { useFavorites } from "@/hooks/use-favorites";
 import Link from "next/link";
 
 type TabType = "active" | "hot" | "warm" | "unmatched";
@@ -29,6 +31,7 @@ type TabType = "active" | "hot" | "warm" | "unmatched";
 export default function SheetPage() {
   const [activeTab, setActiveTab] = useState<TabType>("active");
   const stats = getDealStats();
+  const { isFavorite, toggleFavorite } = useFavorites();
 
   const getDeals = (): Deal[] => {
     switch (activeTab) {
@@ -170,6 +173,7 @@ export default function SheetPage() {
           <Table>
             <TableHeader>
               <TableRow className="bg-muted/50">
+                <TableHead className="w-[40px]"></TableHead>
                 <TableHead className="w-[300px]">Deal Name</TableHead>
                 <TableHead>Contact</TableHead>
                 <TableHead>Notes</TableHead>
@@ -181,6 +185,18 @@ export default function SheetPage() {
             <TableBody>
               {deals.map((deal) => (
                 <TableRow key={deal.id} className="hover:bg-muted/50">
+                  <TableCell>
+                    {deal.matchedProjectId && (
+                      <button
+                        onClick={() => toggleFavorite(deal.matchedProjectId!)}
+                        className="p-1 hover:bg-muted rounded"
+                      >
+                        <Star
+                          className={`h-4 w-4 ${isFavorite(deal.matchedProjectId!) ? "fill-yellow-400 text-yellow-400" : "text-muted-foreground"}`}
+                        />
+                      </button>
+                    )}
+                  </TableCell>
                   <TableCell className="font-medium">
                     {deal.name}
                   </TableCell>

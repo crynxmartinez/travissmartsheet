@@ -4,6 +4,7 @@ import "./globals.css";
 import { Providers } from "@/components/providers";
 import { AppSidebar } from "@/components/app-sidebar";
 import { SidebarInset, SidebarTrigger } from "@/components/ui/sidebar";
+import { GlobalSearch } from "@/components/global-search";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,7 @@ export default function RootLayout({
           <SidebarInset>
             <header className="flex h-14 items-center gap-4 border-b bg-background px-6">
               <SidebarTrigger />
+              <GlobalSearch />
             </header>
             <main className="flex-1 p-6">{children}</main>
           </SidebarInset>

@@ -20,7 +20,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Search, X } from "lucide-react";
+import { Search, X, Star } from "lucide-react";
+import { useFavorites } from "@/hooks/use-favorites";
 import Link from "next/link";
 
 export default function ProjectsPage() {
@@ -29,6 +30,7 @@ export default function ProjectsPage() {
   const [statusFilter, setStatusFilter] = useState<string>("all");
   const [stateFilter, setStateFilter] = useState<string>("all");
   const [customerFilter, setCustomerFilter] = useState<string>("all");
+  const { isFavorite, toggleFavorite } = useFavorites();
 
   // Get unique states from project names
   const states = useMemo(() => {
@@ -200,6 +202,7 @@ export default function ProjectsPage() {
         <Table>
           <TableHeader>
             <TableRow>
+              <TableHead className="w-[40px]"></TableHead>
               <TableHead>Project Name</TableHead>
               <TableHead>Customer</TableHead>
               <TableHead>Label / Status</TableHead>
@@ -209,13 +212,23 @@ export default function ProjectsPage() {
           <TableBody>
             {filteredProjects.length === 0 ? (
               <TableRow>
-                <TableCell colSpan={4} className="text-center py-8">
+                <TableCell colSpan={5} className="text-center py-8">
                   No projects found
                 </TableCell>
               </TableRow>
             ) : (
               filteredProjects.map((project) => (
                 <TableRow key={project.id} className="cursor-pointer hover:bg-muted/50">
+                  <TableCell>
+                    <button
+                      onClick={() => toggleFavorite(project.id)}
+                      className="p-1 hover:bg-muted rounded"
+                    >
+                      <Star
+                        className={`h-4 w-4 ${isFavorite(project.id) ? "fill-yellow-400 text-yellow-400" : "text-muted-foreground"}`}
+                      />
+                    </button>
+                  </TableCell>
                   <TableCell>
                     <Link
                       href={`/projects/${project.id}`}

@@ -8,7 +8,8 @@ import { Project } from "@/lib/types";
 import { formatCurrency } from "@/lib/data";
 import { allDeals } from "@/lib/deals";
 import Link from "next/link";
-import { GripVertical, Flame, Sun, CircleDot } from "lucide-react";
+import { GripVertical, Flame, Sun, CircleDot, Star } from "lucide-react";
+import { useFavorites } from "@/hooks/use-favorites";
 
 interface KanbanCardProps {
   project: Project;
@@ -29,6 +30,7 @@ export function KanbanCard({ project }: KanbanCardProps) {
     transition,
     isDragging,
   } = useSortable({ id: project.id });
+  const { isFavorite, toggleFavorite } = useFavorites();
 
   const style = {
     transform: CSS.Transform.toString(transform),
@@ -53,13 +55,26 @@ export function KanbanCard({ project }: KanbanCardProps) {
         className={`p-3 mb-2 cursor-pointer hover:shadow-md transition-shadow border-l-4 ${getStatusColor(project.colorStatus)}`}
       >
         <div className="flex items-start gap-2">
-          <button
-            {...attributes}
-            {...listeners}
-            className="mt-1 cursor-grab active:cursor-grabbing text-muted-foreground hover:text-foreground"
-          >
-            <GripVertical className="h-4 w-4" />
-          </button>
+          <div className="flex flex-col gap-1">
+            <button
+              {...attributes}
+              {...listeners}
+              className="cursor-grab active:cursor-grabbing text-muted-foreground hover:text-foreground"
+            >
+              <GripVertical className="h-4 w-4" />
+            </button>
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                toggleFavorite(project.id);
+              }}
+              className="hover:bg-muted rounded p-0.5"
+            >
+              <Star
+                className={`h-3 w-3 ${isFavorite(project.id) ? "fill-yellow-400 text-yellow-400" : "text-muted-foreground"}`}
+              />
+            </button>
+          </div>
           <div className="flex-1 min-w-0">
             <Link href={`/projects/${project.id}`}>
               <h4 className="font-medium text-sm truncate hover:underline">

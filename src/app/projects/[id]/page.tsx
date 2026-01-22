@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Mail, Phone, MapPin, Calendar, DollarSign, Flame, Sun, CircleDot, ClipboardList } from "lucide-react";
+import { ArrowLeft, Mail, Phone, MapPin, Calendar, DollarSign, Flame, Sun, CircleDot, ClipboardList, CheckCircle2, Circle } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -242,6 +242,63 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
         </Card>
       </div>
 
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-base flex items-center gap-2">
+            <Calendar className="h-4 w-4" />
+            Project Timeline
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="relative">
+            <div className="flex justify-between items-center mb-6">
+              {[
+                { label: "Reached Out", done: project.reachedOut },
+                { label: "Quote Sent", done: project.quoteSent },
+                { label: "Quote Accepted", done: !!project.quoteAcceptedDeclined },
+                { label: "Deposit", done: project.depositPaid === "Paid" },
+                { label: "Production", done: !!project.metalProduction },
+                { label: "Delivered", done: project.metalDelivery === "Delivered" || project.doorDelivery === "Delivered" },
+              ].map((step, index, arr) => (
+                <div key={step.label} className="flex flex-col items-center relative z-10">
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center ${step.done ? "bg-green-500 text-white" : "bg-gray-200 text-gray-400"}`}>
+                    {step.done ? <CheckCircle2 className="h-5 w-5" /> : <Circle className="h-5 w-5" />}
+                  </div>
+                  <span className={`text-xs mt-2 text-center ${step.done ? "font-medium" : "text-muted-foreground"}`}>
+                    {step.label}
+                  </span>
+                  {index < arr.length - 1 && (
+                    <div className={`absolute top-4 left-8 w-full h-0.5 ${step.done ? "bg-green-500" : "bg-gray-200"}`} style={{ width: "calc(100% + 2rem)" }} />
+                  )}
+                </div>
+              ))}
+            </div>
+            <div className="absolute top-4 left-4 right-4 h-0.5 bg-gray-200 -z-0" />
+          </div>
+          
+          <Separator className="my-4" />
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+            <div>
+              <p className="text-muted-foreground">Quote Accepted Date</p>
+              <p className="font-medium">{project.quoteAcceptedDeclined || "—"}</p>
+            </div>
+            <div>
+              <p className="text-muted-foreground">Deposit Status</p>
+              <p className="font-medium">{project.depositPaid || "—"}</p>
+            </div>
+            <div>
+              <p className="text-muted-foreground">Contractor Start</p>
+              <p className="font-medium">{project.contractorStartDate || "—"}</p>
+            </div>
+            <div>
+              <p className="text-muted-foreground">Job Status</p>
+              <p className="font-medium">{project.jobStatus || "—"}</p>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
       <div className="grid gap-6 md:grid-cols-2">
         <Card>
           <CardHeader>
@@ -287,10 +344,10 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">
-                  Contractor Start Date
+                  Door Order Date
                 </p>
                 <p className="font-medium">
-                  {project.contractorStartDate || "—"}
+                  {project.doorOrderSubmittedDate || "—"}
                 </p>
               </div>
             </div>

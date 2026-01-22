@@ -104,8 +104,9 @@ export const hotDeals = processDeals(hotDealsRaw, "hot");
 export const warmDeals = processDeals(warmDealsRaw, "warm");
 
 export const allDeals = [...activeDeals, ...hotDeals, ...warmDeals];
+export const unmatchedDeals = allDeals.filter(d => d.matchedProjectId === null);
 
-export function getDealsByCategory(category: "active" | "hot" | "warm"): Deal[] {
+export function getDealsByCategory(category: "active" | "hot" | "warm" | "unmatched"): Deal[] {
   switch (category) {
     case "active":
       return activeDeals;
@@ -113,6 +114,8 @@ export function getDealsByCategory(category: "active" | "hot" | "warm"): Deal[] 
       return hotDeals;
     case "warm":
       return warmDeals;
+    case "unmatched":
+      return unmatchedDeals;
   }
 }
 

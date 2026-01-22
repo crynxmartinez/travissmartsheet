@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { activeDeals, hotDeals, warmDeals, getDealStats, Deal } from "@/lib/deals";
+import { activeDeals, hotDeals, warmDeals, unmatchedDeals, getDealStats, Deal } from "@/lib/deals";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -20,10 +20,11 @@ import {
   ExternalLink,
   AlertTriangle,
   CheckCircle2,
+  HelpCircle,
 } from "lucide-react";
 import Link from "next/link";
 
-type TabType = "active" | "hot" | "warm";
+type TabType = "active" | "hot" | "warm" | "unmatched";
 
 export default function SheetPage() {
   const [activeTab, setActiveTab] = useState<TabType>("active");
@@ -37,6 +38,8 @@ export default function SheetPage() {
         return hotDeals;
       case "warm":
         return warmDeals;
+      case "unmatched":
+        return unmatchedDeals;
     }
   };
 
@@ -64,6 +67,13 @@ export default function SheetPage() {
       count: stats.warm,
       color: "bg-yellow-500",
     },
+    { 
+      id: "unmatched", 
+      label: "Not in Database", 
+      icon: <HelpCircle className="h-4 w-4" />, 
+      count: stats.unmatched,
+      color: "bg-gray-500",
+    },
   ];
 
   const getCategoryDescription = () => {
@@ -74,6 +84,8 @@ export default function SheetPage() {
         return "Strong momentum, bids sent, or waiting on feedback";
       case "warm":
         return "Stalled, early-stage, or future timeline";
+      case "unmatched":
+        return "Deals that could not be matched to any project in the Excel database";
     }
   };
 

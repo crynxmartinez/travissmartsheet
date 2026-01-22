@@ -19,6 +19,7 @@ import {
   Columns3,
   BarChart3,
   Users,
+  Table2,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -28,6 +29,11 @@ const menuItems = [
     title: "Dashboard",
     url: "/",
     icon: LayoutDashboard,
+  },
+  {
+    title: "Sheet",
+    url: "/sheet",
+    icon: Table2,
   },
   {
     title: "Kanban Board",

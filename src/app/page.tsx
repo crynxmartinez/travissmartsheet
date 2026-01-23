@@ -2,6 +2,7 @@ import { getKPIData, formatCurrency, projects } from "@/lib/data";
 import { KPICard } from "@/components/kpi-card";
 import { ProjectsByLabelChart, ProjectsByLocationChart } from "@/components/charts";
 import { FavoritesSection } from "@/components/favorites-section";
+import { ProgressLeaderboard } from "@/components/progress-leaderboard";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -224,6 +225,8 @@ export default function Dashboard() {
           </Card>
         </div>
       </div>
+
+      <ProgressLeaderboard />
     </div>
   );
 }

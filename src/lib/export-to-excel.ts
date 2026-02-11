@@ -2,6 +2,7 @@ import * as XLSX from 'xlsx';
 import { Project } from './types';
 
 interface ExportRow {
+  'Category': string;
   'Project Name': string;
   'Customer': string;
   'Phone': string;
@@ -43,11 +44,10 @@ function categorizeProject(project: Project): string {
   return 'No Status';
 }
 
-function projectToRow(project: Project, isChild: boolean = false): ExportRow {
-  const indent = isChild ? '    ' : '';
-  
+function projectToRow(project: Project, category: string): ExportRow {
   return {
-    'Project Name': indent + project.projectName,
+    'Category': category,
+    'Project Name': project.projectName,
     'Customer': project.customer || '',
     'Phone': project.phone || '',
     'Email': project.email || '',
@@ -74,34 +74,6 @@ function projectToRow(project: Project, isChild: boolean = false): ExportRow {
   };
 }
 
-function createParentRow(categoryName: string): ExportRow {
-  return {
-    'Project Name': categoryName,
-    'Customer': '',
-    'Phone': '',
-    'Email': '',
-    'Location': '',
-    'Address': '',
-    'Zip Code': '',
-    'Project Type': '',
-    'Build Size': '',
-    'SQFT': null,
-    'Quote Sent': '',
-    'Reached Out': '',
-    'Quote (Material)': null,
-    'Quote (With Tax)': null,
-    'Quote Accepted': '',
-    'Deposit Paid': '',
-    'Drawings Status': '',
-    'Est. Metal Delivery': '',
-    'Metal Production': '',
-    'Metal Delivery': '',
-    'Door Delivery': '',
-    'Contractor Start': '',
-    'Job Status': '',
-    'Comments': '',
-  };
-}
 
 export function exportProjectsToExcel(projects: Project[]): void {
   // Group projects by category
@@ -137,12 +109,9 @@ export function exportProjectsToExcel(projects: Project[]): void {
   categoryOrder.forEach((category) => {
     const categoryProjects = categories[category];
     if (categoryProjects.length > 0) {
-      // Add parent row
-      rows.push(createParentRow(category));
-      
-      // Add child rows (indented)
+      // Add project rows with category
       categoryProjects.forEach((project) => {
-        rows.push(projectToRow(project, true));
+        rows.push(projectToRow(project, category));
       });
     }
   });
@@ -152,6 +121,7 @@ export function exportProjectsToExcel(projects: Project[]): void {
   
   // Set column widths
   worksheet['!cols'] = [
+    { wch: 20 },  // Category
     { wch: 45 },  // Project Name
     { wch: 20 },  // Customer
     { wch: 15 },  // Phone

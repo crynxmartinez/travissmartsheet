@@ -1,6 +1,6 @@
 [
   {
-    "row": 26,
+    "row": 28,
     "name": "Century Builders (Chris Schuler)",
     "location": null,
     "address": null,
@@ -34,7 +34,7 @@
     "color_status": "Red - Needs Clarification"
   },
   {
-    "row": 27,
+    "row": 29,
     "name": "Carefree AZ",
     "location": null,
     "address": null,
@@ -68,7 +68,7 @@
     "color_status": null
   },
   {
-    "row": 39,
+    "row": 41,
     "name": "Bowman ND (Miller)",
     "location": null,
     "address": null,
@@ -102,7 +102,7 @@
     "color_status": null
   },
   {
-    "row": 52,
+    "row": 54,
     "name": "Detroit Lakes MN",
     "location": null,
     "address": null,
@@ -136,7 +136,7 @@
     "color_status": null
   },
   {
-    "row": 67,
+    "row": 69,
     "name": "Fargo ND (Greg Cotton)",
     "location": null,
     "address": null,
@@ -170,7 +170,7 @@
     "color_status": null
   },
   {
-    "row": 79,
+    "row": 81,
     "name": "Warren MN",
     "location": null,
     "address": null,
@@ -204,7 +204,7 @@
     "color_status": null
   },
   {
-    "row": 91,
+    "row": 93,
     "name": "Hillsboro ND",
     "location": null,
     "address": null,
@@ -238,7 +238,7 @@
     "color_status": null
   },
   {
-    "row": 103,
+    "row": 105,
     "name": "Twinsburg OH",
     "location": null,
     "address": null,
@@ -272,7 +272,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 119,
+    "row": 121,
     "name": "Springfield TN",
     "location": null,
     "address": null,
@@ -306,7 +306,7 @@
     "color_status": null
   },
   {
-    "row": 131,
+    "row": 133,
     "name": "Walterboro SC",
     "location": null,
     "address": null,
@@ -340,7 +340,7 @@
     "color_status": "Red - Needs Clarification"
   },
   {
-    "row": 144,
+    "row": 146,
     "name": "Oak Grove OK",
     "location": null,
     "address": null,
@@ -374,7 +374,7 @@
     "color_status": null
   },
   {
-    "row": 157,
+    "row": 159,
     "name": "Mchenry IL",
     "location": null,
     "address": null,
@@ -408,7 +408,7 @@
     "color_status": "Red - Needs Clarification"
   },
   {
-    "row": 170,
+    "row": 172,
     "name": "Coshocton OH",
     "location": null,
     "address": null,
@@ -442,7 +442,7 @@
     "color_status": null
   },
   {
-    "row": 183,
+    "row": 185,
     "name": "Norfolk NE",
     "location": null,
     "address": null,
@@ -476,7 +476,7 @@
     "color_status": "Purple/Pink"
   },
   {
-    "row": 187,
+    "row": 189,
     "name": "MBS CS IN HOUSE",
     "location": null,
     "address": null,
@@ -510,7 +510,7 @@
     "color_status": null
   },
   {
-    "row": 197,
+    "row": 199,
     "name": "Scappoose OR",
     "location": null,
     "address": null,
@@ -544,7 +544,7 @@
     "color_status": null
   },
   {
-    "row": 201,
+    "row": 203,
     "name": "Coast to coast",
     "location": null,
     "address": null,
@@ -578,7 +578,7 @@
     "color_status": null
   },
   {
-    "row": 210,
+    "row": 212,
     "name": "Scappoose OR",
     "location": null,
     "address": null,
@@ -612,7 +612,7 @@
     "color_status": null
   },
   {
-    "row": 224,
+    "row": 226,
     "name": "Omaha NE",
     "location": null,
     "address": null,
@@ -646,7 +646,7 @@
     "color_status": null
   },
   {
-    "row": 236,
+    "row": 238,
     "name": "Tru Volt",
     "location": null,
     "address": null,
@@ -680,7 +680,7 @@
     "color_status": null
   },
   {
-    "row": 237,
+    "row": 239,
     "name": "Centurion",
     "location": null,
     "address": null,
@@ -714,7 +714,7 @@
     "color_status": null
   },
   {
-    "row": 240,
+    "row": 242,
     "name": "Council Bluffs IA",
     "location": null,
     "address": null,
@@ -748,7 +748,7 @@
     "color_status": null
   },
   {
-    "row": 250,
+    "row": 252,
     "name": "Bil Den",
     "location": null,
     "address": null,
@@ -782,7 +782,7 @@
     "color_status": null
   },
   {
-    "row": 251,
+    "row": 253,
     "name": "Centurion Stone",
     "location": null,
     "address": null,
@@ -816,7 +816,7 @@
     "color_status": null
   },
   {
-    "row": 254,
+    "row": 256,
     "name": "Tru Volt",
     "location": null,
     "address": null,
@@ -850,7 +850,7 @@
     "color_status": null
   },
   {
-    "row": 256,
+    "row": 258,
     "name": "Liberty MS",
     "location": null,
     "address": null,
@@ -884,7 +884,7 @@
     "color_status": null
   },
   {
-    "row": 268,
+    "row": 270,
     "name": "Gunter TX",
     "location": null,
     "address": null,
@@ -918,7 +918,7 @@
     "color_status": "Purple/Pink"
   },
   {
-    "row": 273,
+    "row": 275,
     "name": "MPI",
     "location": null,
     "address": null,
@@ -952,7 +952,7 @@
     "color_status": null
   },
   {
-    "row": 282,
+    "row": 284,
     "name": "Southgate MI",
     "location": null,
     "address": null,
@@ -986,7 +986,7 @@
     "color_status": "Brown - Ongoing Project"
   },
   {
-    "row": 289,
+    "row": 291,
     "name": "RUSSELL DRAWINGS",
     "location": null,
     "address": null,
@@ -1020,7 +1020,7 @@
     "color_status": "Yellow - Quotation"
   },
   {
-    "row": 290,
+    "row": 292,
     "name": "New Central From Brad",
     "location": null,
     "address": null,
@@ -1054,7 +1054,7 @@
     "color_status": null
   },
   {
-    "row": 291,
+    "row": 293,
     "name": "Coast to Coast",
     "location": null,
     "address": null,
@@ -1088,7 +1088,7 @@
     "color_status": null
   },
   {
-    "row": 292,
+    "row": 294,
     "name": "MPI",
     "location": null,
     "address": null,
@@ -1122,7 +1122,7 @@
     "color_status": null
   },
   {
-    "row": 296,
+    "row": 298,
     "name": "Concrete",
     "location": null,
     "address": null,
@@ -1156,7 +1156,7 @@
     "color_status": null
   },
   {
-    "row": 299,
+    "row": 301,
     "name": "Marine City MI",
     "location": null,
     "address": null,
@@ -1190,7 +1190,7 @@
     "color_status": "Purple/Pink"
   },
   {
-    "row": 311,
+    "row": 313,
     "name": "Buffalo NY",
     "location": null,
     "address": null,
@@ -1224,7 +1224,7 @@
     "color_status": null
   },
   {
-    "row": 324,
+    "row": 326,
     "name": "Fitchburg MA",
     "location": null,
     "address": null,
@@ -1258,7 +1258,7 @@
     "color_status": null
   },
   {
-    "row": 336,
+    "row": 338,
     "name": "Saint Johns Canada NB",
     "location": null,
     "address": null,
@@ -1292,7 +1292,7 @@
     "color_status": null
   },
   {
-    "row": 340,
+    "row": 342,
     "name": "MPI",
     "location": null,
     "address": null,
@@ -1326,7 +1326,7 @@
     "color_status": null
   },
   {
-    "row": 350,
+    "row": 352,
     "name": "Bedford Heights OH",
     "location": null,
     "address": null,
@@ -1360,7 +1360,7 @@
     "color_status": "Purple/Pink"
   },
   {
-    "row": 362,
+    "row": 364,
     "name": "Unknown",
     "location": null,
     "address": null,
@@ -1394,7 +1394,7 @@
     "color_status": null
   },
   {
-    "row": 375,
+    "row": 377,
     "name": "Unknown",
     "location": null,
     "address": null,
@@ -1428,7 +1428,7 @@
     "color_status": null
   },
   {
-    "row": 388,
+    "row": 390,
     "name": "Rosewell NM",
     "location": null,
     "address": null,
@@ -1462,7 +1462,7 @@
     "color_status": null
   },
   {
-    "row": 402,
+    "row": 404,
     "name": "Casco MI",
     "location": null,
     "address": null,
@@ -1496,7 +1496,7 @@
     "color_status": null
   },
   {
-    "row": 415,
+    "row": 417,
     "name": "Lansing MI",
     "location": null,
     "address": null,
@@ -1530,7 +1530,7 @@
     "color_status": null
   },
   {
-    "row": 426,
+    "row": 428,
     "name": "Ben With Technique roofing",
     "location": null,
     "address": null,
@@ -1564,7 +1564,7 @@
     "color_status": null
   },
   {
-    "row": 427,
+    "row": 429,
     "name": "Jose Concrete",
     "location": null,
     "address": null,
@@ -1598,7 +1598,7 @@
     "color_status": null
   },
   {
-    "row": 429,
+    "row": 431,
     "name": "Littleton NC",
     "location": null,
     "address": null,
@@ -1632,7 +1632,7 @@
     "color_status": null
   },
   {
-    "row": 440,
+    "row": 442,
     "name": "Georgia",
     "location": null,
     "address": null,
@@ -1666,7 +1666,7 @@
     "color_status": null
   },
   {
-    "row": 452,
+    "row": 454,
     "name": "Liberty OH",
     "location": null,
     "address": null,
@@ -1700,7 +1700,7 @@
     "color_status": null
   },
   {
-    "row": 466,
+    "row": 468,
     "name": "Frederick MD",
     "location": null,
     "address": null,
@@ -1734,7 +1734,7 @@
     "color_status": null
   },
   {
-    "row": 480,
+    "row": 482,
     "name": "Sun City AZ (covered parking)",
     "location": null,
     "address": null,
@@ -1768,7 +1768,7 @@
     "color_status": null
   },
   {
-    "row": 494,
+    "row": 496,
     "name": "Sun City AZ (RV/Contractor)",
     "location": null,
     "address": null,
@@ -1802,7 +1802,7 @@
     "color_status": null
   },
   {
-    "row": 508,
+    "row": 510,
     "name": "Jacksonville AR",
     "location": null,
     "address": null,
@@ -1836,7 +1836,7 @@
     "color_status": null
   },
   {
-    "row": 522,
+    "row": 524,
     "name": "Unknown",
     "location": null,
     "address": null,
@@ -1870,7 +1870,7 @@
     "color_status": null
   },
   {
-    "row": 536,
+    "row": 538,
     "name": "My Shop",
     "location": null,
     "address": null,
@@ -1904,7 +1904,7 @@
     "color_status": null
   },
   {
-    "row": 551,
+    "row": 553,
     "name": "Unknown",
     "location": null,
     "address": null,
@@ -1938,7 +1938,7 @@
     "color_status": null
   },
   {
-    "row": 565,
+    "row": 567,
     "name": "Springfield MO",
     "location": null,
     "address": null,
@@ -1972,7 +1972,7 @@
     "color_status": null
   },
   {
-    "row": 579,
+    "row": 581,
     "name": "Willis TX",
     "location": null,
     "address": null,
@@ -2006,7 +2006,7 @@
     "color_status": "Purple/Pink"
   },
   {
-    "row": 593,
+    "row": 595,
     "name": "Bennington NE",
     "location": null,
     "address": null,
@@ -2040,7 +2040,7 @@
     "color_status": null
   },
   {
-    "row": 598,
+    "row": 600,
     "name": "SBS Andre",
     "location": null,
     "address": null,
@@ -2074,7 +2074,7 @@
     "color_status": null
   },
   {
-    "row": 600,
+    "row": 602,
     "name": "Tru Volt",
     "location": null,
     "address": null,
@@ -2108,7 +2108,7 @@
     "color_status": null
   },
   {
-    "row": 601,
+    "row": 603,
     "name": "CDF Door",
     "location": null,
     "address": null,
@@ -2142,7 +2142,7 @@
     "color_status": null
   },
   {
-    "row": 603,
+    "row": 605,
     "name": "Elite Excavating",
     "location": null,
     "address": null,
@@ -2176,7 +2176,7 @@
     "color_status": null
   },
   {
-    "row": 604,
+    "row": 606,
     "name": "Major Drain",
     "location": null,
     "address": null,
@@ -2210,7 +2210,7 @@
     "color_status": null
   },
   {
-    "row": 611,
+    "row": 613,
     "name": "Supreme",
     "location": null,
     "address": null,
@@ -2244,7 +2244,7 @@
     "color_status": null
   },
   {
-    "row": 614,
+    "row": 616,
     "name": "Chris Menn",
     "location": null,
     "address": null,
@@ -2278,7 +2278,7 @@
     "color_status": null
   },
   {
-    "row": 616,
+    "row": 618,
     "name": "PlumbRite",
     "location": null,
     "address": null,
@@ -2312,7 +2312,7 @@
     "color_status": null
   },
   {
-    "row": 617,
+    "row": 619,
     "name": "Chenango NY",
     "location": null,
     "address": null,
@@ -2346,7 +2346,7 @@
     "color_status": null
   },
   {
-    "row": 631,
+    "row": 633,
     "name": "Vestal NY",
     "location": null,
     "address": null,
@@ -2380,7 +2380,7 @@
     "color_status": null
   },
   {
-    "row": 645,
+    "row": 647,
     "name": "Unknown",
     "location": null,
     "address": null,
@@ -2414,7 +2414,7 @@
     "color_status": null
   },
   {
-    "row": 659,
+    "row": 661,
     "name": "Unknown",
     "location": null,
     "address": null,
@@ -2448,7 +2448,7 @@
     "color_status": null
   },
   {
-    "row": 673,
+    "row": 675,
     "name": "Unknown",
     "location": null,
     "address": null,
@@ -2482,7 +2482,7 @@
     "color_status": null
   },
   {
-    "row": 687,
+    "row": 689,
     "name": "Davenport IA",
     "location": null,
     "address": null,
@@ -2516,7 +2516,7 @@
     "color_status": "Purple/Pink"
   },
   {
-    "row": 701,
+    "row": 703,
     "name": "Cedar Rapids IA",
     "location": null,
     "address": null,
@@ -2550,7 +2550,7 @@
     "color_status": null
   },
   {
-    "row": 715,
+    "row": 717,
     "name": "Unknown",
     "location": null,
     "address": null,
@@ -2584,7 +2584,7 @@
     "color_status": null
   },
   {
-    "row": 729,
+    "row": 731,
     "name": "Elk City OK",
     "location": null,
     "address": null,
@@ -2618,7 +2618,7 @@
     "color_status": null
   },
   {
-    "row": 743,
+    "row": 745,
     "name": "Unknown",
     "location": null,
     "address": null,
@@ -2652,7 +2652,7 @@
     "color_status": null
   },
   {
-    "row": 757,
+    "row": 759,
     "name": "Council Bluffs IA",
     "location": null,
     "address": null,
@@ -2686,7 +2686,7 @@
     "color_status": null
   },
   {
-    "row": 771,
+    "row": 773,
     "name": "Kansas City MO",
     "location": null,
     "address": null,
@@ -2720,7 +2720,7 @@
     "color_status": null
   },
   {
-    "row": 785,
+    "row": 787,
     "name": "Omaha NE",
     "location": null,
     "address": null,
@@ -2754,7 +2754,7 @@
     "color_status": null
   },
   {
-    "row": 799,
+    "row": 801,
     "name": "Unknown",
     "location": null,
     "address": null,
@@ -2788,7 +2788,7 @@
     "color_status": null
   },
   {
-    "row": 813,
+    "row": 815,
     "name": "Pharr TX (unknown)",
     "location": null,
     "address": null,
@@ -2822,7 +2822,7 @@
     "color_status": null
   },
   {
-    "row": 827,
+    "row": 829,
     "name": "Grant FL 60x100",
     "location": null,
     "address": null,
@@ -2856,7 +2856,7 @@
     "color_status": null
   },
   {
-    "row": 832,
+    "row": 834,
     "name": "Gable Street",
     "location": null,
     "address": null,
@@ -2890,7 +2890,7 @@
     "color_status": null
   },
   {
-    "row": 833,
+    "row": 835,
     "name": "SBS",
     "location": null,
     "address": null,
@@ -2924,7 +2924,7 @@
     "color_status": null
   },
   {
-    "row": 843,
+    "row": 845,
     "name": "Grant FL 60x160/200",
     "location": null,
     "address": null,
@@ -2958,7 +2958,7 @@
     "color_status": "Purple/Pink"
   },
   {
-    "row": 849,
+    "row": 851,
     "name": "SBS",
     "location": null,
     "address": null,
@@ -2992,7 +2992,7 @@
     "color_status": null
   },
   {
-    "row": 860,
+    "row": 862,
     "name": "Grant FL 80x150x17",
     "location": null,
     "address": null,
@@ -3026,7 +3026,7 @@
     "color_status": null
   },
   {
-    "row": 866,
+    "row": 868,
     "name": "SBS",
     "location": null,
     "address": null,
@@ -3060,7 +3060,7 @@
     "color_status": null
   },
   {
-    "row": 876,
+    "row": 878,
     "name": "Santa Clarita CA",
     "location": null,
     "address": null,
@@ -3094,7 +3094,7 @@
     "color_status": null
   },
   {
-    "row": 890,
+    "row": 892,
     "name": "Rush City MN",
     "location": null,
     "address": null,
@@ -3128,7 +3128,7 @@
     "color_status": null
   },
   {
-    "row": 905,
+    "row": 907,
     "name": "Elyria OH",
     "location": null,
     "address": null,
@@ -3162,7 +3162,7 @@
     "color_status": "Purple/Pink"
   },
   {
-    "row": 921,
+    "row": 923,
     "name": "Detroit MI (No Project Yet)",
     "location": null,
     "address": null,
@@ -3196,7 +3196,7 @@
     "color_status": null
   },
   {
-    "row": 934,
+    "row": 936,
     "name": "Cameron TX",
     "location": null,
     "address": null,
@@ -3230,7 +3230,7 @@
     "color_status": "Purple/Pink"
   },
   {
-    "row": 947,
+    "row": 949,
     "name": "678-690 Portland Ave New York Rochester 14621",
     "location": null,
     "address": null,
@@ -3264,7 +3264,7 @@
     "color_status": null
   },
   {
-    "row": 960,
+    "row": 962,
     "name": "3500 E Isabella (m-20) and 505 vance Road Midland Michigan",
     "location": null,
     "address": null,
@@ -3298,7 +3298,7 @@
     "color_status": null
   },
   {
-    "row": 973,
+    "row": 975,
     "name": "Montgomery NY",
     "location": null,
     "address": null,
@@ -3332,7 +3332,7 @@
     "color_status": null
   },
   {
-    "row": 988,
+    "row": 990,
     "name": "Red Oak IA",
     "location": null,
     "address": null,
@@ -3366,7 +3366,7 @@
     "color_status": null
   },
   {
-    "row": 1003,
+    "row": 1005,
     "name": "Minnesota",
     "location": null,
     "address": null,
@@ -3400,7 +3400,7 @@
     "color_status": null
   },
   {
-    "row": 1018,
+    "row": 1020,
     "name": "Seymour TN",
     "location": null,
     "address": null,
@@ -3434,7 +3434,7 @@
     "color_status": null
   },
   {
-    "row": 1033,
+    "row": 1035,
     "name": "Moberly MO",
     "location": null,
     "address": null,
@@ -3468,7 +3468,7 @@
     "color_status": null
   },
   {
-    "row": 1048,
+    "row": 1050,
     "name": "Appleton WI (NOT ZONED)",
     "location": null,
     "address": null,
@@ -3502,7 +3502,7 @@
     "color_status": null
   },
   {
-    "row": 1063,
+    "row": 1065,
     "name": "Freeland, MI",
     "location": null,
     "address": null,
@@ -3536,7 +3536,7 @@
     "color_status": null
   },
   {
-    "row": 1066,
+    "row": 1068,
     "name": "Beacon Builders",
     "location": null,
     "address": null,
@@ -3570,7 +3570,7 @@
     "color_status": null
   },
   {
-    "row": 1079,
+    "row": 1081,
     "name": "Richmond, VA",
     "location": null,
     "address": null,
@@ -3604,7 +3604,7 @@
     "color_status": null
   },
   {
-    "row": 1094,
+    "row": 1096,
     "name": "Westlake, LA",
     "location": null,
     "address": null,
@@ -3638,7 +3638,7 @@
     "color_status": null
   },
   {
-    "row": 1109,
+    "row": 1111,
     "name": "Edwardsville IL",
     "location": null,
     "address": null,
@@ -3672,7 +3672,7 @@
     "color_status": null
   },
   {
-    "row": 1124,
+    "row": 1126,
     "name": "Edwardsville, IL",
     "location": null,
     "address": null,
@@ -3706,7 +3706,7 @@
     "color_status": null
   },
   {
-    "row": 1139,
+    "row": 1141,
     "name": "Central FL",
     "location": null,
     "address": null,
@@ -3740,7 +3740,7 @@
     "color_status": null
   },
   {
-    "row": 1146,
+    "row": 1148,
     "name": "rapid Building Set",
     "location": null,
     "address": null,
@@ -3774,7 +3774,7 @@
     "color_status": null
   },
   {
-    "row": 1154,
+    "row": 1156,
     "name": "Shippensburg, PA",
     "location": null,
     "address": null,
@@ -3808,7 +3808,7 @@
     "color_status": null
   },
   {
-    "row": 1169,
+    "row": 1171,
     "name": "Hot Springs, AR",
     "location": null,
     "address": null,
@@ -3842,7 +3842,7 @@
     "color_status": null
   },
   {
-    "row": 1184,
+    "row": 1186,
     "name": "Unknown",
     "location": null,
     "address": null,
@@ -3876,7 +3876,7 @@
     "color_status": null
   },
   {
-    "row": 1198,
+    "row": 1200,
     "name": "Charleston WV",
     "location": null,
     "address": null,
@@ -3910,7 +3910,7 @@
     "color_status": null
   },
   {
-    "row": 1212,
+    "row": 1214,
     "name": "Cairo, MO",
     "location": null,
     "address": null,
@@ -3944,7 +3944,7 @@
     "color_status": null
   },
   {
-    "row": 1226,
+    "row": 1228,
     "name": "Kentucky",
     "location": null,
     "address": null,
@@ -3978,7 +3978,7 @@
     "color_status": null
   },
   {
-    "row": 1240,
+    "row": 1242,
     "name": "NO INFO",
     "location": null,
     "address": null,
@@ -4012,7 +4012,7 @@
     "color_status": null
   },
   {
-    "row": 1254,
+    "row": 1256,
     "name": "Chester, ME",
     "location": null,
     "address": null,
@@ -4046,7 +4046,7 @@
     "color_status": null
   },
   {
-    "row": 1268,
+    "row": 1270,
     "name": "Burnt Hills, NY",
     "location": null,
     "address": null,
@@ -4080,7 +4080,7 @@
     "color_status": null
   },
   {
-    "row": 1282,
+    "row": 1284,
     "name": "Miamisburg, OH",
     "location": null,
     "address": null,
@@ -4114,7 +4114,7 @@
     "color_status": null
   },
   {
-    "row": 1296,
+    "row": 1298,
     "name": "Alpena, MI",
     "location": null,
     "address": null,
@@ -4148,7 +4148,7 @@
     "color_status": null
   },
   {
-    "row": 1310,
+    "row": 1312,
     "name": "Choctaw, OK",
     "location": null,
     "address": null,
@@ -4182,7 +4182,7 @@
     "color_status": null
   },
   {
-    "row": 1324,
+    "row": 1326,
     "name": "Unknown",
     "location": null,
     "address": null,
@@ -4216,7 +4216,7 @@
     "color_status": null
   },
   {
-    "row": 1338,
+    "row": 1340,
     "name": "St. Petersburg, FL",
     "location": null,
     "address": null,
@@ -4250,7 +4250,7 @@
     "color_status": null
   },
   {
-    "row": 1352,
+    "row": 1354,
     "name": "Mishawaka, IN",
     "location": null,
     "address": null,
@@ -4284,7 +4284,7 @@
     "color_status": null
   },
   {
-    "row": 1366,
+    "row": 1368,
     "name": "Olmsted Falls, OH",
     "location": null,
     "address": null,
@@ -4318,7 +4318,7 @@
     "color_status": null
   },
   {
-    "row": 1380,
+    "row": 1382,
     "name": "Central LA",
     "location": null,
     "address": null,
@@ -4352,7 +4352,7 @@
     "color_status": null
   },
   {
-    "row": 1394,
+    "row": 1396,
     "name": "Aransas Pass TX",
     "location": null,
     "address": null,
@@ -4386,7 +4386,7 @@
     "color_status": null
   },
   {
-    "row": 1408,
+    "row": 1410,
     "name": "Omaha NE Z Street",
     "location": null,
     "address": null,
@@ -4420,7 +4420,7 @@
     "color_status": "Brown - Ongoing Project"
   },
   {
-    "row": 1433,
+    "row": 1435,
     "name": "Omaha NE N 23rd Plaza",
     "location": null,
     "address": null,
@@ -4454,7 +4454,7 @@
     "color_status": null
   },
   {
-    "row": 1447,
+    "row": 1449,
     "name": "Allenton, MI",
     "location": null,
     "address": null,
@@ -4488,7 +4488,7 @@
     "color_status": null
   },
   {
-    "row": 1461,
+    "row": 1463,
     "name": "Spartanburg, SC",
     "location": null,
     "address": null,
@@ -4522,7 +4522,7 @@
     "color_status": null
   },
   {
-    "row": 1475,
+    "row": 1477,
     "name": "Unknown",
     "location": null,
     "address": null,
@@ -4556,7 +4556,7 @@
     "color_status": null
   },
   {
-    "row": 1489,
+    "row": 1491,
     "name": "Unknown",
     "location": null,
     "address": null,
@@ -4590,7 +4590,7 @@
     "color_status": null
   },
   {
-    "row": 1503,
+    "row": 1505,
     "name": "Mansfield, OH",
     "location": null,
     "address": null,
@@ -4624,7 +4624,7 @@
     "color_status": null
   },
   {
-    "row": 1517,
+    "row": 1519,
     "name": "Danbury, TX",
     "location": null,
     "address": null,
@@ -4658,7 +4658,7 @@
     "color_status": null
   },
   {
-    "row": 1531,
+    "row": 1533,
     "name": "Glenville, NC",
     "location": null,
     "address": null,
@@ -4692,7 +4692,7 @@
     "color_status": null
   },
   {
-    "row": 1545,
+    "row": 1547,
     "name": "Norway, SC",
     "location": null,
     "address": null,
@@ -4726,7 +4726,7 @@
     "color_status": null
   },
   {
-    "row": 1559,
+    "row": 1561,
     "name": "Hooper, NE",
     "location": null,
     "address": null,
@@ -4760,7 +4760,7 @@
     "color_status": null
   },
   {
-    "row": 1573,
+    "row": 1575,
     "name": "Lancaster, SC",
     "location": null,
     "address": null,
@@ -4794,7 +4794,7 @@
     "color_status": null
   },
   {
-    "row": 1587,
+    "row": 1589,
     "name": "Pataskala, OH",
     "location": null,
     "address": null,
@@ -4828,7 +4828,7 @@
     "color_status": null
   },
   {
-    "row": 1601,
+    "row": 1603,
     "name": "Thornville, OH",
     "location": null,
     "address": null,
@@ -4862,7 +4862,7 @@
     "color_status": null
   },
   {
-    "row": 1602,
+    "row": 1604,
     "name": "El Prado, NM",
     "location": null,
     "address": null,
@@ -4896,7 +4896,7 @@
     "color_status": null
   },
   {
-    "row": 1616,
+    "row": 1618,
     "name": "Four Towns, MI",
     "location": null,
     "address": null,
@@ -4930,7 +4930,7 @@
     "color_status": null
   },
   {
-    "row": 1630,
+    "row": 1632,
     "name": "Traffic Control Building",
     "location": null,
     "address": null,
@@ -4964,7 +4964,7 @@
     "color_status": null
   },
   {
-    "row": 1636,
+    "row": 1638,
     "name": "Behlen",
     "location": null,
     "address": null,
@@ -4998,7 +4998,7 @@
     "color_status": null
   },
   {
-    "row": 1644,
+    "row": 1646,
     "name": "Prescott Arizonia",
     "location": null,
     "address": null,
@@ -5032,7 +5032,7 @@
     "color_status": null
   },
   {
-    "row": 1658,
+    "row": 1660,
     "name": "Indianapolis",
     "location": null,
     "address": null,
@@ -5066,7 +5066,7 @@
     "color_status": "Purple/Pink"
   },
   {
-    "row": 1729,
+    "row": 1731,
     "name": "1080 Highway One\n\nMalabar FL  (high rise FL october)",
     "location": null,
     "address": null,
@@ -5100,7 +5100,7 @@
     "color_status": null
   },
   {
-    "row": 1730,
+    "row": 1732,
     "name": "Eagle, Nebraska",
     "location": null,
     "address": null,
@@ -5134,7 +5134,7 @@
     "color_status": "Purple/Pink"
   },
   {
-    "row": 1744,
+    "row": 1746,
     "name": "Matt Fatka",
     "location": null,
     "address": null,
@@ -5168,7 +5168,7 @@
     "color_status": null
   },
   {
-    "row": 1750,
+    "row": 1752,
     "name": "Behlen",
     "location": null,
     "address": null,
@@ -5202,7 +5202,7 @@
     "color_status": null
   },
   {
-    "row": 1751,
+    "row": 1753,
     "name": "MBS",
     "location": null,
     "address": null,
@@ -5236,7 +5236,7 @@
     "color_status": null
   },
   {
-    "row": 1757,
+    "row": 1759,
     "name": "Tru Volt",
     "location": null,
     "address": null,
@@ -5270,7 +5270,7 @@
     "color_status": null
   },
   {
-    "row": 1758,
+    "row": 1760,
     "name": "LD Shed 50x140x16",
     "location": null,
     "address": null,
@@ -5304,7 +5304,7 @@
     "color_status": null
   },
   {
-    "row": 1759,
+    "row": 1761,
     "name": "Aplha",
     "location": null,
     "address": null,
@@ -5338,7 +5338,7 @@
     "color_status": null
   },
   {
-    "row": 1761,
+    "row": 1763,
     "name": "Centurion",
     "location": null,
     "address": null,
@@ -5372,7 +5372,7 @@
     "color_status": null
   },
   {
-    "row": 1762,
+    "row": 1764,
     "name": "#1761Sugarland Expansion",
     "location": null,
     "address": "15500 Voss Rd #200, Sugar Land, TX 77498",
@@ -5406,8 +5406,8 @@
     "color_status": "Brown - Ongoing Project"
   },
   {
-    "row": 1793,
-    "name": "Blair High Road",
+    "row": 1794,
+    "name": "#1791 Blair High Road",
     "location": null,
     "address": "7505 N 101st St, Omaha, NE 68122",
     "label": "2025 Active Bid",
@@ -5440,7 +5440,75 @@
     "color_status": "Brown - Ongoing Project"
   },
   {
-    "row": 1836,
+    "row": 1831,
+    "name": "Bluffs Electric",
+    "location": null,
+    "address": null,
+    "label": null,
+    "quote_sent": false,
+    "reached_out": false,
+    "total_cogs": 159800.0,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": "00E5E5E5",
+    "color_status": null
+  },
+  {
+    "row": 1834,
+    "name": "Metal Panels Inc",
+    "location": null,
+    "address": null,
+    "label": null,
+    "quote_sent": false,
+    "reached_out": false,
+    "total_cogs": 153787.25,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": null,
+    "color_status": null
+  },
+  {
+    "row": 1841,
     "name": "bluffs electric",
     "location": null,
     "address": null,
@@ -5474,7 +5542,7 @@
     "color_status": null
   },
   {
-    "row": 1839,
+    "row": 1844,
     "name": "Major Drain",
     "location": null,
     "address": null,
@@ -5508,7 +5576,7 @@
     "color_status": null
   },
   {
-    "row": 1846,
+    "row": 1851,
     "name": "Tru Volt",
     "location": null,
     "address": null,
@@ -5542,7 +5610,7 @@
     "color_status": null
   },
   {
-    "row": 1849,
+    "row": 1856,
     "name": "add to Hampstead NC Flex Toni Job NC",
     "location": null,
     "address": null,
@@ -5576,7 +5644,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 1863,
+    "row": 1870,
     "name": "#1859 Derby, Kansas",
     "location": null,
     "address": "4632 East 63rd Street SouthDerby, KS 67037",
@@ -5610,7 +5678,7 @@
     "color_status": "Brown - Ongoing Project"
   },
   {
-    "row": 1933,
+    "row": 1940,
     "name": "Core and Main",
     "location": null,
     "address": null,
@@ -5644,7 +5712,7 @@
     "color_status": null
   },
   {
-    "row": 1937,
+    "row": 1944,
     "name": "Fremar (LVC)",
     "location": null,
     "address": null,
@@ -5678,7 +5746,7 @@
     "color_status": null
   },
   {
-    "row": 1938,
+    "row": 1945,
     "name": "7m",
     "location": null,
     "address": null,
@@ -5712,7 +5780,7 @@
     "color_status": null
   },
   {
-    "row": 1939,
+    "row": 1946,
     "name": "Heartstone (Crushed Concrete Fill)",
     "location": null,
     "address": null,
@@ -5746,7 +5814,7 @@
     "color_status": null
   },
   {
-    "row": 1940,
+    "row": 1947,
     "name": "Cornejo",
     "location": null,
     "address": null,
@@ -5780,7 +5848,7 @@
     "color_status": null
   },
   {
-    "row": 1941,
+    "row": 1948,
     "name": "National Site Materials",
     "location": null,
     "address": null,
@@ -5814,7 +5882,7 @@
     "color_status": null
   },
   {
-    "row": 1943,
+    "row": 1950,
     "name": "Butler Quarry (Crushed Concrete)",
     "location": null,
     "address": null,
@@ -5848,7 +5916,7 @@
     "color_status": null
   },
   {
-    "row": 1945,
+    "row": 1952,
     "name": "Pearson (Crushed Concrete)",
     "location": null,
     "address": null,
@@ -5882,7 +5950,7 @@
     "color_status": null
   },
   {
-    "row": 1946,
+    "row": 1953,
     "name": "Nov 11 ( 6 truckloads )",
     "location": null,
     "address": null,
@@ -5916,7 +5984,7 @@
     "color_status": null
   },
   {
-    "row": 1947,
+    "row": 1954,
     "name": "Flintedge Stone",
     "location": null,
     "address": null,
@@ -5950,7 +6018,7 @@
     "color_status": null
   },
   {
-    "row": 1951,
+    "row": 1958,
     "name": "Eck Services",
     "location": null,
     "address": null,
@@ -5984,7 +6052,7 @@
     "color_status": null
   },
   {
-    "row": 1952,
+    "row": 1959,
     "name": "June 9",
     "location": null,
     "address": null,
@@ -6018,7 +6086,7 @@
     "color_status": null
   },
   {
-    "row": 1953,
+    "row": 1960,
     "name": "December 1",
     "location": null,
     "address": null,
@@ -6052,7 +6120,7 @@
     "color_status": null
   },
   {
-    "row": 1954,
+    "row": 1961,
     "name": "Miller Electric",
     "location": null,
     "address": null,
@@ -6086,7 +6154,7 @@
     "color_status": null
   },
   {
-    "row": 1957,
+    "row": 1964,
     "name": "Meyer's Electric",
     "location": null,
     "address": null,
@@ -6120,7 +6188,7 @@
     "color_status": null
   },
   {
-    "row": 1960,
+    "row": 1967,
     "name": "Eck Services",
     "location": null,
     "address": null,
@@ -6154,7 +6222,7 @@
     "color_status": null
   },
   {
-    "row": 1962,
+    "row": 1969,
     "name": "Kruse Corps",
     "location": null,
     "address": null,
@@ -6188,7 +6256,7 @@
     "color_status": null
   },
   {
-    "row": 1964,
+    "row": 1971,
     "name": "American Mechanical",
     "location": null,
     "address": null,
@@ -6222,7 +6290,7 @@
     "color_status": null
   },
   {
-    "row": 1967,
+    "row": 1974,
     "name": "Eck Services",
     "location": null,
     "address": null,
@@ -6256,7 +6324,7 @@
     "color_status": null
   },
   {
-    "row": 1969,
+    "row": 1976,
     "name": "Colt's Plumbing",
     "location": null,
     "address": null,
@@ -6290,7 +6358,7 @@
     "color_status": null
   },
   {
-    "row": 1972,
+    "row": 1979,
     "name": "Nauman",
     "location": null,
     "address": null,
@@ -6324,7 +6392,7 @@
     "color_status": null
   },
   {
-    "row": 1974,
+    "row": 1981,
     "name": "Intertek",
     "location": null,
     "address": null,
@@ -6358,7 +6426,7 @@
     "color_status": null
   },
   {
-    "row": 1975,
+    "row": 1982,
     "name": "Terracon",
     "location": null,
     "address": null,
@@ -6392,7 +6460,7 @@
     "color_status": null
   },
   {
-    "row": 1977,
+    "row": 1984,
     "name": "Unruh Excavating",
     "location": null,
     "address": null,
@@ -6426,7 +6494,7 @@
     "color_status": null
   },
   {
-    "row": 1978,
+    "row": 1985,
     "name": "Dondlinger",
     "location": null,
     "address": null,
@@ -6460,7 +6528,7 @@
     "color_status": null
   },
   {
-    "row": 1979,
+    "row": 1986,
     "name": "Midwest Construction",
     "location": null,
     "address": null,
@@ -6494,7 +6562,7 @@
     "color_status": null
   },
   {
-    "row": 1980,
+    "row": 1987,
     "name": "Apex Excavating",
     "location": null,
     "address": null,
@@ -6528,7 +6596,7 @@
     "color_status": null
   },
   {
-    "row": 1982,
+    "row": 1989,
     "name": "Wilks Underground",
     "location": null,
     "address": null,
@@ -6562,7 +6630,7 @@
     "color_status": null
   },
   {
-    "row": 1983,
+    "row": 1990,
     "name": "Alan Bough",
     "location": null,
     "address": null,
@@ -6596,7 +6664,7 @@
     "color_status": null
   },
   {
-    "row": 1986,
+    "row": 1993,
     "name": "October 28",
     "location": null,
     "address": null,
@@ -6630,7 +6698,7 @@
     "color_status": null
   },
   {
-    "row": 1988,
+    "row": 1995,
     "name": "Nov 5 (ASTM)",
     "location": null,
     "address": null,
@@ -6664,7 +6732,7 @@
     "color_status": null
   },
   {
-    "row": 1995,
+    "row": 2002,
     "name": "Nov 25",
     "location": null,
     "address": null,
@@ -6698,7 +6766,7 @@
     "color_status": null
   },
   {
-    "row": 1996,
+    "row": 2003,
     "name": "Dec 1",
     "location": null,
     "address": null,
@@ -6732,7 +6800,41 @@
     "color_status": null
   },
   {
-    "row": 1998,
+    "row": 2005,
+    "name": "Ewertz",
+    "location": null,
+    "address": null,
+    "label": null,
+    "quote_sent": true,
+    "reached_out": true,
+    "total_cogs": 32300.0,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": null,
+    "color_status": null
+  },
+  {
+    "row": 2008,
     "name": "Wilks Underground",
     "location": null,
     "address": null,
@@ -6766,7 +6868,7 @@
     "color_status": null
   },
   {
-    "row": 1999,
+    "row": 2009,
     "name": "Nowak Construction",
     "location": null,
     "address": null,
@@ -6800,7 +6902,7 @@
     "color_status": null
   },
   {
-    "row": 2001,
+    "row": 2011,
     "name": "Mccullough",
     "location": null,
     "address": null,
@@ -6834,7 +6936,7 @@
     "color_status": null
   },
   {
-    "row": 2005,
+    "row": 2017,
     "name": "Nov 6",
     "location": null,
     "address": null,
@@ -6868,7 +6970,7 @@
     "color_status": null
   },
   {
-    "row": 2006,
+    "row": 2018,
     "name": "Nov 11 (GPS Control Points)",
     "location": null,
     "address": null,
@@ -6902,7 +7004,7 @@
     "color_status": null
   },
   {
-    "row": 2007,
+    "row": 2019,
     "name": "Garber Surveying (no document)",
     "location": null,
     "address": null,
@@ -6936,7 +7038,7 @@
     "color_status": null
   },
   {
-    "row": 2009,
+    "row": 2021,
     "name": "Nov 12 (Phase 1)",
     "location": null,
     "address": null,
@@ -6970,7 +7072,7 @@
     "color_status": null
   },
   {
-    "row": 2010,
+    "row": 2022,
     "name": "Nov 12 (Phase 1 and 2)",
     "location": null,
     "address": null,
@@ -7004,7 +7106,7 @@
     "color_status": null
   },
   {
-    "row": 2015,
+    "row": 2027,
     "name": "Pruitt paving",
     "location": null,
     "address": null,
@@ -7038,7 +7140,7 @@
     "color_status": null
   },
   {
-    "row": 2016,
+    "row": 2028,
     "name": "Pave the Way",
     "location": null,
     "address": null,
@@ -7073,6 +7175,74 @@
   },
   {
     "row": 2031,
+    "name": "Quicken",
+    "location": null,
+    "address": null,
+    "label": null,
+    "quote_sent": false,
+    "reached_out": false,
+    "total_cogs": 198782.89,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": null,
+    "color_status": null
+  },
+  {
+    "row": 2033,
+    "name": "MPI",
+    "location": null,
+    "address": null,
+    "label": null,
+    "quote_sent": false,
+    "reached_out": false,
+    "total_cogs": 192817.93,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": null,
+    "color_status": null
+  },
+  {
+    "row": 2044,
     "name": "AFS South - Toledo",
     "location": null,
     "address": null,
@@ -7106,7 +7276,7 @@
     "color_status": "Brown - Ongoing Project"
   },
   {
-    "row": 2037,
+    "row": 2050,
     "name": "Option 1",
     "location": null,
     "address": null,
@@ -7140,7 +7310,7 @@
     "color_status": null
   },
   {
-    "row": 2038,
+    "row": 2051,
     "name": "Option 2",
     "location": null,
     "address": null,
@@ -7174,7 +7344,7 @@
     "color_status": null
   },
   {
-    "row": 2039,
+    "row": 2052,
     "name": "Green Earth",
     "location": null,
     "address": null,
@@ -7208,7 +7378,7 @@
     "color_status": null
   },
   {
-    "row": 2051,
+    "row": 2064,
     "name": "Garcia Surveyors",
     "location": null,
     "address": null,
@@ -7242,7 +7412,7 @@
     "color_status": null
   },
   {
-    "row": 2052,
+    "row": 2065,
     "name": "FWB Surveying",
     "location": null,
     "address": null,
@@ -7276,7 +7446,7 @@
     "color_status": null
   },
   {
-    "row": 2056,
+    "row": 2069,
     "name": "Sandman Sales Yard",
     "location": null,
     "address": null,
@@ -7310,7 +7480,7 @@
     "color_status": null
   },
   {
-    "row": 2057,
+    "row": 2070,
     "name": "Green Earth (Compactable Sand)",
     "location": null,
     "address": null,
@@ -7344,7 +7514,7 @@
     "color_status": null
   },
   {
-    "row": 2058,
+    "row": 2071,
     "name": "Renewed Outdoors (Contractor's Fill)",
     "location": null,
     "address": null,
@@ -7378,7 +7548,7 @@
     "color_status": null
   },
   {
-    "row": 2060,
+    "row": 2073,
     "name": "Mccormick",
     "location": null,
     "address": null,
@@ -7412,7 +7582,7 @@
     "color_status": null
   },
   {
-    "row": 2061,
+    "row": 2074,
     "name": "Autogate (9 weeks leadtime)",
     "location": null,
     "address": null,
@@ -7446,7 +7616,7 @@
     "color_status": null
   },
   {
-    "row": 2063,
+    "row": 2076,
     "name": "Marleau Fence",
     "location": null,
     "address": null,
@@ -7480,7 +7650,7 @@
     "color_status": null
   },
   {
-    "row": 2064,
+    "row": 2077,
     "name": "Superior Fence (Cantilever gate)",
     "location": null,
     "address": null,
@@ -7514,7 +7684,7 @@
     "color_status": null
   },
   {
-    "row": 2065,
+    "row": 2078,
     "name": "Superior Fence (Labor and Install Fence)",
     "location": null,
     "address": null,
@@ -7548,7 +7718,7 @@
     "color_status": null
   },
   {
-    "row": 2066,
+    "row": 2079,
     "name": "American Fence and Supply",
     "location": null,
     "address": null,
@@ -7582,7 +7752,7 @@
     "color_status": null
   },
   {
-    "row": 2068,
+    "row": 2081,
     "name": "Superior Fence",
     "location": null,
     "address": null,
@@ -7616,7 +7786,7 @@
     "color_status": null
   },
   {
-    "row": 2069,
+    "row": 2082,
     "name": "American Fence and Supply",
     "location": null,
     "address": null,
@@ -7650,7 +7820,7 @@
     "color_status": null
   },
   {
-    "row": 2091,
+    "row": 2104,
     "name": "Quick Steel BOM",
     "location": null,
     "address": null,
@@ -7684,7 +7854,7 @@
     "color_status": null
   },
   {
-    "row": 2114,
+    "row": 2127,
     "name": "Brian Barret - Fort Crook",
     "location": null,
     "address": null,
@@ -7718,7 +7888,7 @@
     "color_status": "Brown - Ongoing Project"
   },
   {
-    "row": 2140,
+    "row": 2153,
     "name": "Grand Junction Co.",
     "location": null,
     "address": null,
@@ -7752,7 +7922,7 @@
     "color_status": "Brown - Ongoing Project"
   },
   {
-    "row": 2167,
+    "row": 2180,
     "name": "605 Neighborhood-Valley Springs, SD -Toni",
     "location": "South Dakota",
     "address": null,
@@ -7786,7 +7956,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 2192,
+    "row": 2205,
     "name": "Randy Grinalds (liberty lake Wa)",
     "location": null,
     "address": null,
@@ -7820,7 +7990,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 2198,
+    "row": 2211,
     "name": "MPI",
     "location": null,
     "address": null,
@@ -7854,8 +8024,8 @@
     "color_status": null
   },
   {
-    "row": 2206,
-    "name": "GARY BARIGHT",
+    "row": 2219,
+    "name": "(2210) GARY BARIGHT",
     "location": null,
     "address": null,
     "label": "2025 Active project",
@@ -7888,7 +8058,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 2235,
+    "row": 2248,
     "name": "#2210 1215 fort",
     "location": null,
     "address": null,
@@ -7922,7 +8092,7 @@
     "color_status": "Brown - Ongoing Project"
   },
   {
-    "row": 2253,
+    "row": 2267,
     "name": "Chris Menn",
     "location": null,
     "address": null,
@@ -7956,7 +8126,7 @@
     "color_status": null
   },
   {
-    "row": 2254,
+    "row": 2268,
     "name": "Are Cost",
     "location": null,
     "address": null,
@@ -7990,7 +8160,7 @@
     "color_status": null
   },
   {
-    "row": 2255,
+    "row": 2269,
     "name": "Elite Excavating",
     "location": null,
     "address": null,
@@ -8024,7 +8194,7 @@
     "color_status": null
   },
   {
-    "row": 2256,
+    "row": 2270,
     "name": "Continential A1",
     "location": null,
     "address": null,
@@ -8058,7 +8228,7 @@
     "color_status": null
   },
   {
-    "row": 2258,
+    "row": 2272,
     "name": "mahoney Fire",
     "location": null,
     "address": null,
@@ -8092,7 +8262,7 @@
     "color_status": null
   },
   {
-    "row": 2259,
+    "row": 2273,
     "name": "Electrical Tru Volt",
     "location": null,
     "address": null,
@@ -8126,7 +8296,7 @@
     "color_status": null
   },
   {
-    "row": 2266,
+    "row": 2281,
     "name": "Santiago",
     "location": null,
     "address": null,
@@ -8160,7 +8330,7 @@
     "color_status": null
   },
   {
-    "row": 2267,
+    "row": 2282,
     "name": "#2237 Terre Du Lac Watchman expansion --Toni",
     "location": "Missouri",
     "address": "76 Rue Terre Bonne, Bonne Terre, MO 63628",
@@ -8194,7 +8364,7 @@
     "color_status": "Brown - Ongoing Project"
   },
   {
-    "row": 2296,
+    "row": 2311,
     "name": "Wichita Falls",
     "location": null,
     "address": null,
@@ -8228,7 +8398,7 @@
     "color_status": "Brown - Ongoing Project"
   },
   {
-    "row": 2297,
+    "row": 2312,
     "name": "MBS",
     "location": null,
     "address": null,
@@ -8262,7 +8432,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 2322,
+    "row": 2337,
     "name": "Butte Montana",
     "location": null,
     "address": null,
@@ -8296,7 +8466,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 2336,
+    "row": 2351,
     "name": "1215 Fort Street A1",
     "location": null,
     "address": null,
@@ -8330,7 +8500,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 2347,
+    "row": 2363,
     "name": "Bob Mahoney",
     "location": null,
     "address": null,
@@ -8364,7 +8534,7 @@
     "color_status": null
   },
   {
-    "row": 2351,
+    "row": 2367,
     "name": "#2321 Choctaw Expansion Austin - Toni",
     "location": "Oklahoma",
     "address": "14237 SE 29th St   Choctaw, OK 73020",
@@ -8398,7 +8568,7 @@
     "color_status": "Brown - Ongoing Project"
   },
   {
-    "row": 2382,
+    "row": 2398,
     "name": "Easley (Anderson County) SC-Toni",
     "location": "South Carolina",
     "address": null,
@@ -8432,7 +8602,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 2396,
+    "row": 2412,
     "name": "Oklahoma City Conversion Toni",
     "location": null,
     "address": null,
@@ -8466,7 +8636,7 @@
     "color_status": "Red - Needs Clarification"
   },
   {
-    "row": 2410,
+    "row": 2426,
     "name": "Hampstead NC Flex Conceptual Toni",
     "location": null,
     "address": null,
@@ -8500,7 +8670,7 @@
     "color_status": null
   },
   {
-    "row": 2438,
+    "row": 2454,
     "name": "Drummond Island MI",
     "location": null,
     "address": null,
@@ -8534,7 +8704,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 2452,
+    "row": 2468,
     "name": "#2433 Brad Mann Yellow Brick Road",
     "location": null,
     "address": "1303 Old Justin Rd, Argyle, TX 76226",
@@ -8568,7 +8738,7 @@
     "color_status": "Brown - Ongoing Project"
   },
   {
-    "row": 2465,
+    "row": 2481,
     "name": "BLDG-7 Sealed GA 11.20.2025",
     "location": null,
     "address": null,
@@ -8602,7 +8772,7 @@
     "color_status": null
   },
   {
-    "row": 2494,
+    "row": 2510,
     "name": "AFS Lenexa",
     "location": null,
     "address": null,
@@ -8636,7 +8806,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 2512,
+    "row": 2528,
     "name": "Rhoades - The Yard Butler",
     "location": null,
     "address": null,
@@ -8670,7 +8840,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 2528,
+    "row": 2544,
     "name": "New Orleans boat & RV-potential devel Toni",
     "location": null,
     "address": null,
@@ -8704,7 +8874,7 @@
     "color_status": "Orange"
   },
   {
-    "row": 2542,
+    "row": 2558,
     "name": "Methuen, MA-Conceptual plans/Boat/RV/Flex-Toni",
     "location": null,
     "address": null,
@@ -8738,7 +8908,7 @@
     "color_status": "Red - Needs Clarification"
   },
   {
-    "row": 2556,
+    "row": 2572,
     "name": "Grand Lakes Flex -Austin/Toni",
     "location": null,
     "address": null,
@@ -8772,7 +8942,7 @@
     "color_status": "Orange"
   },
   {
-    "row": 2570,
+    "row": 2586,
     "name": "#2543 24 Kitchen Pickle Ball-Toni",
     "location": "Oklahoma",
     "address": "1219 N Santa Fe Ave, Moore, OK 73160",
@@ -8806,7 +8976,41 @@
     "color_status": "Brown - Ongoing Project"
   },
   {
-    "row": 2594,
+    "row": 2605,
+    "name": "Quicken Steel",
+    "location": null,
+    "address": null,
+    "label": null,
+    "quote_sent": false,
+    "reached_out": false,
+    "total_cogs": 189923.89,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": null,
+    "color_status": null
+  },
+  {
+    "row": 2610,
     "name": "Garmont",
     "location": null,
     "address": null,
@@ -8840,7 +9044,7 @@
     "color_status": null
   },
   {
-    "row": 2604,
+    "row": 2620,
     "name": "Quiet Warehouse Michael (landmark)",
     "location": null,
     "address": null,
@@ -8874,7 +9078,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 2631,
+    "row": 2647,
     "name": "Canden Johnson Seward Project",
     "location": null,
     "address": null,
@@ -8908,7 +9112,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 2661,
+    "row": 2677,
     "name": "RNR Tire Expansion-Shawnee, OK-Toni",
     "location": null,
     "address": null,
@@ -8942,7 +9146,7 @@
     "color_status": "Red - Needs Clarification"
   },
   {
-    "row": 2676,
+    "row": 2692,
     "name": "Cityscape Houston TX",
     "location": null,
     "address": null,
@@ -8976,7 +9180,7 @@
     "color_status": null
   },
   {
-    "row": 2684,
+    "row": 2700,
     "name": "Northwind",
     "location": null,
     "address": null,
@@ -9010,7 +9214,7 @@
     "color_status": null
   },
   {
-    "row": 2686,
+    "row": 2702,
     "name": "Viking Electric",
     "location": null,
     "address": null,
@@ -9044,7 +9248,7 @@
     "color_status": null
   },
   {
-    "row": 2687,
+    "row": 2703,
     "name": "Modern Electric",
     "location": null,
     "address": null,
@@ -9078,7 +9282,7 @@
     "color_status": null
   },
   {
-    "row": 2702,
+    "row": 2718,
     "name": "Canden building",
     "location": null,
     "address": null,
@@ -9112,7 +9316,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 2717,
+    "row": 2733,
     "name": "Elizabeth Kentucky-10509 Dixie Hwy Louisville KY",
     "location": null,
     "address": null,
@@ -9146,7 +9350,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 2718,
+    "row": 2734,
     "name": "MBS",
     "location": null,
     "address": null,
@@ -9180,7 +9384,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 2744,
+    "row": 2760,
     "name": "Safford Drive-Swanzey,New Hampshire",
     "location": null,
     "address": null,
@@ -9214,7 +9418,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 2759,
+    "row": 2775,
     "name": "Avon Indiana car",
     "location": null,
     "address": null,
@@ -9248,7 +9452,7 @@
     "color_status": null
   },
   {
-    "row": 2774,
+    "row": 2790,
     "name": "Leland, NC Small Bays-Toni",
     "location": null,
     "address": null,
@@ -9282,7 +9486,7 @@
     "color_status": "Red - Needs Clarification"
   },
   {
-    "row": 2789,
+    "row": 2805,
     "name": "1000 Front Street Vestal \u2013 Indoor Conversion",
     "location": null,
     "address": null,
@@ -9316,7 +9520,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 2804,
+    "row": 2820,
     "name": "100 Chenango Bridge Road",
     "location": null,
     "address": null,
@@ -9350,7 +9554,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 2819,
+    "row": 2835,
     "name": "The Yard Butler - 50x265",
     "location": null,
     "address": null,
@@ -9384,7 +9588,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 2834,
+    "row": 2850,
     "name": "Garden City, GA, Flex-Toni",
     "location": null,
     "address": null,
@@ -9418,7 +9622,7 @@
     "color_status": "Red - Needs Clarification"
   },
   {
-    "row": 2849,
+    "row": 2865,
     "name": "3171 South Kinney Road Tucson-Arizona",
     "location": null,
     "address": null,
@@ -9452,7 +9656,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 2864,
+    "row": 2880,
     "name": "A5 Storage - Beatrice NE",
     "location": null,
     "address": null,
@@ -9486,7 +9690,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 2881,
+    "row": 2897,
     "name": "Derby Potential",
     "location": null,
     "address": null,
@@ -9520,7 +9724,7 @@
     "color_status": null
   },
   {
-    "row": 2896,
+    "row": 2912,
     "name": "Shawnee, OK expansion-Toni",
     "location": null,
     "address": null,
@@ -9554,8 +9758,8 @@
     "color_status": "Red - Needs Clarification"
   },
   {
-    "row": 2911,
-    "name": "#2891 Kilpatrick Turnpike Storage, Ok City, OK-Toni/Austin",
+    "row": 2927,
+    "name": "#2891 Yukon Kilpatrick Turnpike Storage, Ok City, OK-Toni/Austin",
     "location": null,
     "address": null,
     "label": "2025 New Lead",
@@ -9588,8 +9792,8 @@
     "color_status": "Yellow - Quotation"
   },
   {
-    "row": 2927,
-    "name": "Dogwood Canopy-Watchman-Toni",
+    "row": 2943,
+    "name": "#2927 Dogwood Canopy-Watchman-Toni",
     "location": null,
     "address": null,
     "label": null,
@@ -9618,14 +9822,14 @@
     "contractor_date": null,
     "job_status": null,
     "comments": null,
-    "color": "00EA352E",
-    "color_status": "Red - Needs Clarification"
+    "color": "0040B14B",
+    "color_status": "Green - Already Quoted"
   },
   {
-    "row": 2944,
-    "name": "Daves Gas Station",
-    "location": null,
-    "address": null,
+    "row": 2966,
+    "name": "#2948 Daves Gas Station",
+    "location": "Ohio",
+    "address": "1035 S Main St, Akron, OH 44311",
     "label": null,
     "quote_sent": false,
     "reached_out": false,
@@ -9656,7 +9860,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 2947,
+    "row": 2969,
     "name": "MBS VA",
     "location": null,
     "address": null,
@@ -9690,7 +9894,7 @@
     "color_status": null
   },
   {
-    "row": 2959,
+    "row": 2981,
     "name": "2957 Garden Highway Self Storage",
     "location": null,
     "address": null,
@@ -9724,7 +9928,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 2974,
+    "row": 2996,
     "name": "Sentinel Self Storage - Waller",
     "location": null,
     "address": null,
@@ -9758,8 +9962,8 @@
     "color_status": "Red - Needs Clarification"
   },
   {
-    "row": 2989,
-    "name": "#2965 South Austin Commerce Park 5 Bldgs",
+    "row": 3011,
+    "name": "#2994 South Austin",
     "location": null,
     "address": null,
     "label": null,
@@ -9792,7 +9996,7 @@
     "color_status": "Brown - Ongoing Project"
   },
   {
-    "row": 3018,
+    "row": 3042,
     "name": "3016 Heideke Seguin 3 Bldgs",
     "location": null,
     "address": null,
@@ -9826,7 +10030,7 @@
     "color_status": "Brown - Ongoing Project"
   },
   {
-    "row": 3067,
+    "row": 3091,
     "name": "Moscow Mills",
     "location": null,
     "address": null,
@@ -9860,7 +10064,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 3098,
+    "row": 3122,
     "name": "Chicken Barn Oklahoma",
     "location": null,
     "address": null,
@@ -9894,7 +10098,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 3113,
+    "row": 3137,
     "name": "Inola OK PEMB",
     "location": null,
     "address": null,
@@ -9928,7 +10132,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 3128,
+    "row": 3152,
     "name": "Blairsville GA Storage Expansion",
     "location": null,
     "address": null,
@@ -9962,7 +10166,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 3143,
+    "row": 3167,
     "name": "MayFran Scott baum",
     "location": null,
     "address": null,
@@ -9996,7 +10200,7 @@
     "color_status": "Brown - Ongoing Project"
   },
   {
-    "row": 3168,
+    "row": 3192,
     "name": "Sioux Falls South Dakota",
     "location": null,
     "address": null,
@@ -10030,7 +10234,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 3183,
+    "row": 3207,
     "name": "Sapphire Job",
     "location": null,
     "address": null,
@@ -10064,7 +10268,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 3198,
+    "row": 3222,
     "name": "Storage King USA",
     "location": null,
     "address": null,
@@ -10098,7 +10302,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 3263,
+    "row": 3287,
     "name": "Princeton Project",
     "location": null,
     "address": null,
@@ -10132,7 +10336,7 @@
     "color_status": null
   },
   {
-    "row": 3289,
+    "row": 3313,
     "name": "Secure Space Self Storage Lewisville TX",
     "location": null,
     "address": null,
@@ -10166,7 +10370,7 @@
     "color_status": "Red - Needs Clarification"
   },
   {
-    "row": 3314,
+    "row": 3338,
     "name": "3312 Hurricane UT Storage",
     "location": null,
     "address": null,
@@ -10200,7 +10404,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 3331,
+    "row": 3355,
     "name": "Hopewell Township PA",
     "location": null,
     "address": null,
@@ -10234,7 +10438,7 @@
     "color_status": null
   },
   {
-    "row": 3356,
+    "row": 3380,
     "name": "3354 Blueridge Road - Partners",
     "location": null,
     "address": null,
@@ -10268,7 +10472,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 3382,
+    "row": 3406,
     "name": "3380 West Indianapolis Storage",
     "location": null,
     "address": null,
@@ -10302,7 +10506,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 3407,
+    "row": 3431,
     "name": "Southfield MI Indoor",
     "location": null,
     "address": null,
@@ -10336,7 +10540,7 @@
     "color_status": "Red - Needs Clarification"
   },
   {
-    "row": 3432,
+    "row": 3456,
     "name": "Public Storage CO",
     "location": null,
     "address": null,
@@ -10370,7 +10574,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 3458,
+    "row": 3482,
     "name": "#3436 GHI Choctaw Phase 3-Toni",
     "location": "Oklahoma",
     "address": "14237 SE 29th St Choctaw, OK 73020",
@@ -10404,7 +10608,75 @@
     "color_status": "Brown - Ongoing Project"
   },
   {
-    "row": 3485,
+    "row": 3498,
+    "name": "Metal Panels Inc",
+    "location": null,
+    "address": null,
+    "label": null,
+    "quote_sent": false,
+    "reached_out": false,
+    "total_cogs": 137708.5,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": null,
+    "color_status": null
+  },
+  {
+    "row": 3500,
+    "name": "Quicken",
+    "location": null,
+    "address": null,
+    "label": null,
+    "quote_sent": false,
+    "reached_out": false,
+    "total_cogs": 82535.0,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": null,
+    "color_status": null
+  },
+  {
+    "row": 3514,
     "name": "3483 American General Storage Expansion",
     "location": "Illinois",
     "address": null,
@@ -10438,7 +10710,7 @@
     "color_status": null
   },
   {
-    "row": 3511,
+    "row": 3540,
     "name": "Ft Crook Reskin Project",
     "location": null,
     "address": null,
@@ -10472,7 +10744,7 @@
     "color_status": "Yellow - Quotation"
   },
   {
-    "row": 3536,
+    "row": 3565,
     "name": "A1 Site Plan (Lenie Behie)",
     "location": null,
     "address": null,
@@ -10506,7 +10778,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 3561,
+    "row": 3590,
     "name": "Small Bay Flex (Jim Berry)",
     "location": null,
     "address": null,
@@ -10540,7 +10812,7 @@
     "color_status": null
   },
   {
-    "row": 3586,
+    "row": 3615,
     "name": "Homegrown Storage (Will Rogers)",
     "location": null,
     "address": null,
@@ -10574,7 +10846,7 @@
     "color_status": null
   },
   {
-    "row": 3611,
+    "row": 3640,
     "name": "Wichita Falls new - RV and Boat Storage XL",
     "location": "Texas",
     "address": "7541 Central Freeway North Wichita Falls, TX 76306",
@@ -10608,7 +10880,7 @@
     "color_status": "Yellow - Quotation"
   },
   {
-    "row": 3671,
+    "row": 3700,
     "name": "Client_PO_Authorizations",
     "location": null,
     "address": null,
@@ -10642,7 +10914,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 3672,
+    "row": 3701,
     "name": "Subcontracts",
     "location": null,
     "address": null,
@@ -10676,7 +10948,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 3673,
+    "row": 3702,
     "name": "COR (Request)",
     "location": null,
     "address": null,
@@ -10710,7 +10982,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 3674,
+    "row": 3703,
     "name": "CO (Executed)",
     "location": null,
     "address": null,
@@ -10744,7 +11016,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 3675,
+    "row": 3704,
     "name": "Schedule_of_Values",
     "location": null,
     "address": null,
@@ -10778,7 +11050,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 3676,
+    "row": 3705,
     "name": "Insurance_Bonding_COIs",
     "location": null,
     "address": null,
@@ -10812,7 +11084,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 3698,
+    "row": 3727,
     "name": "Pennsylvania Job (Matt Bertsch)",
     "location": null,
     "address": null,
@@ -10846,7 +11118,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 3723,
+    "row": 3752,
     "name": "#3677-Budget Store and Lock Self Storage- Shillington",
     "location": "Pennsylvania",
     "address": null,
@@ -10880,7 +11152,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 3748,
+    "row": 3777,
     "name": "3746 Partners Flex PEMB Waco",
     "location": "Texas",
     "address": null,
@@ -10914,9 +11186,9 @@
     "color_status": null
   },
   {
-    "row": 3774,
+    "row": 3803,
     "name": "Flex Space - Duncan, SC (Andrey Petrin)",
-    "location": null,
+    "location": "South Carolina",
     "address": null,
     "label": null,
     "quote_sent": false,
@@ -10948,7 +11220,7 @@
     "color_status": null
   },
   {
-    "row": 3800,
+    "row": 3829,
     "name": "Clear Lake Storage Depot Expansion",
     "location": "Iowa",
     "address": null,
@@ -10982,7 +11254,7 @@
     "color_status": null
   },
   {
-    "row": 3826,
+    "row": 3855,
     "name": "Lewisville, TX Self-Storage Deveopment (CJ)- Toni",
     "location": "Texas",
     "address": null,
@@ -11016,7 +11288,7 @@
     "color_status": "Red - Needs Clarification"
   },
   {
-    "row": 3852,
+    "row": 3881,
     "name": "#3818 Knoxville Expansion or New Development-Toni",
     "location": "Tennessee",
     "address": null,
@@ -11050,7 +11322,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 3878,
+    "row": 3907,
     "name": "#3877 MAK Rapid City",
     "location": "South Dakota",
     "address": null,
@@ -11080,11 +11352,11 @@
     "contractor_date": null,
     "job_status": null,
     "comments": null,
-    "color": "0040B14B",
-    "color_status": "Green - Already Quoted"
+    "color": "00757575",
+    "color_status": null
   },
   {
-    "row": 3909,
+    "row": 3938,
     "name": "Donovan",
     "location": null,
     "address": null,
@@ -11118,7 +11390,7 @@
     "color_status": null
   },
   {
-    "row": 3910,
+    "row": 3939,
     "name": "Iron Horse Excavating",
     "location": null,
     "address": null,
@@ -11152,7 +11424,7 @@
     "color_status": null
   },
   {
-    "row": 3912,
+    "row": 3941,
     "name": "Mick's Electric",
     "location": null,
     "address": null,
@@ -11186,7 +11458,7 @@
     "color_status": null
   },
   {
-    "row": 3913,
+    "row": 3942,
     "name": "Muth's Electric",
     "location": null,
     "address": null,
@@ -11220,7 +11492,7 @@
     "color_status": null
   },
   {
-    "row": 3915,
+    "row": 3944,
     "name": "Iron Horse Excavating",
     "location": null,
     "address": null,
@@ -11254,7 +11526,7 @@
     "color_status": null
   },
   {
-    "row": 3916,
+    "row": 3945,
     "name": "Northwest Pipe Fittings",
     "location": null,
     "address": null,
@@ -11288,7 +11560,7 @@
     "color_status": null
   },
   {
-    "row": 3917,
+    "row": 3946,
     "name": "Core and Main",
     "location": null,
     "address": null,
@@ -11322,7 +11594,7 @@
     "color_status": null
   },
   {
-    "row": 3919,
+    "row": 3948,
     "name": "Donovan",
     "location": null,
     "address": null,
@@ -11356,7 +11628,7 @@
     "color_status": null
   },
   {
-    "row": 3920,
+    "row": 3949,
     "name": "Jack MAK Waco Texas",
     "location": "Texas",
     "address": null,
@@ -11390,7 +11662,7 @@
     "color_status": "Red - Needs Clarification"
   },
   {
-    "row": 3923,
+    "row": 3952,
     "name": "Iron Horse",
     "location": null,
     "address": null,
@@ -11424,7 +11696,7 @@
     "color_status": null
   },
   {
-    "row": 3925,
+    "row": 3954,
     "name": "Iron Horse",
     "location": null,
     "address": null,
@@ -11458,7 +11730,7 @@
     "color_status": null
   },
   {
-    "row": 3927,
+    "row": 3956,
     "name": "Iron Horse",
     "location": null,
     "address": null,
@@ -11492,7 +11764,7 @@
     "color_status": null
   },
   {
-    "row": 3953,
+    "row": 3982,
     "name": "Lonestar Electric Supply PEMB",
     "location": "Texas",
     "address": null,
@@ -11526,7 +11798,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 3979,
+    "row": 4008,
     "name": "Butte Site Plan",
     "location": null,
     "address": null,
@@ -11560,7 +11832,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 4005,
+    "row": 4034,
     "name": "Shouse - Ponca Hills (Damian)",
     "location": "Nebraska",
     "address": null,
@@ -11594,7 +11866,7 @@
     "color_status": null
   },
   {
-    "row": 4033,
+    "row": 4062,
     "name": "#4017 Marine Creek Storage (Brian Sullivan)",
     "location": "Texas",
     "address": "3665 Marine Creek Pkwy, Fort Worth, TX 76106",
@@ -11624,13 +11896,13 @@
     "contractor_date": null,
     "job_status": null,
     "comments": null,
-    "color": "0040B14B",
-    "color_status": "Green - Already Quoted"
+    "color": "00757575",
+    "color_status": null
   },
   {
-    "row": 4062,
+    "row": 4092,
     "name": "#4036 Jack LaMotte Iowa",
-    "location": null,
+    "location": "Iowa",
     "address": null,
     "label": null,
     "quote_sent": false,
@@ -11662,7 +11934,7 @@
     "color_status": "Yellow - Quotation"
   },
   {
-    "row": 4114,
+    "row": 4144,
     "name": "Jack Cedar Creek Capital - SC 12,000 sf development",
     "location": "South Carolina",
     "address": null,
@@ -11696,7 +11968,7 @@
     "color_status": null
   },
   {
-    "row": 4140,
+    "row": 4170,
     "name": "4139 Public Storage Riverview",
     "location": "Florida",
     "address": null,
@@ -11730,7 +12002,7 @@
     "color_status": "Yellow - Quotation"
   },
   {
-    "row": 4166,
+    "row": 4196,
     "name": "Jack StorQuest Prescott",
     "location": "Arizona",
     "address": null,
@@ -11764,7 +12036,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 4192,
+    "row": 4222,
     "name": "Jack Extra Space Fort Worth",
     "location": "Texas",
     "address": null,
@@ -11798,9 +12070,9 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 4219,
+    "row": 4249,
     "name": "2425 Wiley Blvd SW, Cedar Rapids, IA",
-    "location": null,
+    "location": "Iowa",
     "address": null,
     "label": null,
     "quote_sent": false,
@@ -11832,9 +12104,9 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 4245,
-    "name": "2323 W Pioneer Pkwy, Peoria, IL",
-    "location": null,
+    "row": 4275,
+    "name": "(4253)  2323 W Pioneer Pkwy, Peoria, IL",
+    "location": "Illinois",
     "address": null,
     "label": null,
     "quote_sent": false,
@@ -11866,7 +12138,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 4271,
+    "row": 4301,
     "name": "# 4256 5646 N 90th st Omaha ne",
     "location": null,
     "address": null,
@@ -11900,7 +12172,7 @@
     "color_status": "Yellow - Quotation"
   },
   {
-    "row": 4297,
+    "row": 4327,
     "name": "Secure Access Self Storage Expansion, Elizabeth City, NC-Toni",
     "location": "North Carolina",
     "address": "1100 Megan Drive - Elizabeth City, NC 27909",
@@ -11934,7 +12206,7 @@
     "color_status": null
   },
   {
-    "row": 4323,
+    "row": 4353,
     "name": "King, NC- 2 Story CC Self-Storage Building-Toni",
     "location": "North Carolina",
     "address": "125 Kingscote Way, King, NC 27021",
@@ -11968,7 +12240,7 @@
     "color_status": null
   },
   {
-    "row": 4349,
+    "row": 4379,
     "name": "Self Storage in Clover, NC-Toni",
     "location": "North Carolina",
     "address": null,
@@ -12002,7 +12274,7 @@
     "color_status": null
   },
   {
-    "row": 4375,
+    "row": 4405,
     "name": "Dobbin - Huffsmith Flex Industrial Park - Magnolia, TX",
     "location": null,
     "address": null,
@@ -12036,7 +12308,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 4401,
+    "row": 4431,
     "name": "LES - RGS Warehouse",
     "location": "Nebraska",
     "address": "8000 SW 12th St, Lincoln, NE 68512",
@@ -12070,7 +12342,7 @@
     "color_status": null
   },
   {
-    "row": 4428,
+    "row": 4458,
     "name": "Personal Arena (Bobby Burnett)",
     "location": "Texas",
     "address": null,
@@ -12104,7 +12376,7 @@
     "color_status": null
   },
   {
-    "row": 4455,
+    "row": 4485,
     "name": "Canopy Shop Build-Bloomingdale, GA-Toni",
     "location": "Georgia",
     "address": "Bloomingdale, GA",
@@ -12138,7 +12410,7 @@
     "color_status": "Red - Needs Clarification"
   },
   {
-    "row": 4484,
+    "row": 4514,
     "name": "#4447 Washington, Utah Self Storage Conversion-Toni",
     "location": "Utah",
     "address": "1335 Red Ledge Road, Washington, Utah 84780",
@@ -12155,6 +12427,40 @@
     "project_sqft": 4300.0,
     "our_quote_material": null,
     "sales_tax": null,
+    "our_quote_with_tax": 77712.0,
+    "quote_accepted": "Accepted",
+    "deposit_paid": "Paid",
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": "00D0AF8F",
+    "color_status": "Brown - Ongoing Project"
+  },
+  {
+    "row": 4527,
+    "name": "Trac Rite",
+    "location": null,
+    "address": null,
+    "label": null,
+    "quote_sent": false,
+    "reached_out": false,
+    "total_cogs": 20286.1,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
     "our_quote_with_tax": null,
     "quote_accepted": null,
     "deposit_paid": null,
@@ -12168,11 +12474,11 @@
     "contractor_date": null,
     "job_status": null,
     "comments": null,
-    "color": "007ED085",
-    "color_status": "Green - Already Quoted"
+    "color": null,
+    "color_status": null
   },
   {
-    "row": 4510,
+    "row": 4541,
     "name": "Aberdeen, NC Conversion-Toni",
     "location": "North Carolina",
     "address": "3140 NC Hwy 5, Ste A, Aberdeen, NC 28315",
@@ -12206,7 +12512,7 @@
     "color_status": "Yellow - Quotation"
   },
   {
-    "row": 4536,
+    "row": 4567,
     "name": "Jack Iowa Irrigation Warehouse",
     "location": "Iowa",
     "address": null,
@@ -12240,7 +12546,7 @@
     "color_status": "Yellow - Quotation"
   },
   {
-    "row": 4562,
+    "row": 4593,
     "name": "4560 Dayton Business Park PEMB",
     "location": "Texas",
     "address": null,
@@ -12274,7 +12580,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 4588,
+    "row": 4619,
     "name": "#4587 Justin Phillip",
     "location": "Iowa",
     "address": null,
@@ -12308,7 +12614,7 @@
     "color_status": "Yellow - Quotation"
   },
   {
-    "row": 4614,
+    "row": 4645,
     "name": "Brooksville FL Reskin",
     "location": null,
     "address": null,
@@ -12342,7 +12648,7 @@
     "color_status": "Red - Needs Clarification"
   },
   {
-    "row": 4640,
+    "row": 4671,
     "name": "Southwest Plaza",
     "location": "Kansas",
     "address": null,
@@ -12376,7 +12682,7 @@
     "color_status": null
   },
   {
-    "row": 4666,
+    "row": 4697,
     "name": "Murray County, MN PEMB",
     "location": null,
     "address": null,
@@ -12410,7 +12716,7 @@
     "color_status": null
   },
   {
-    "row": 4692,
+    "row": 4723,
     "name": "#4691 Old Bridge",
     "location": "New Jersey",
     "address": null,
@@ -12444,7 +12750,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 4720,
+    "row": 4751,
     "name": "Idaho Project (Brad Jensen)",
     "location": "Idaho",
     "address": "136 SOUTH STATE STREET, SHELLEY, IDAHO 83274",
@@ -12478,7 +12784,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 4746,
+    "row": 4777,
     "name": "REVKO Katy Flex",
     "location": null,
     "address": null,
@@ -12512,7 +12818,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 4772,
+    "row": 4803,
     "name": "Job # 4740 Dayton, TX self storage-Toni",
     "location": "Texas",
     "address": "2751 FM 1960, Dayton, TX, 77535 USA",
@@ -12546,7 +12852,7 @@
     "color_status": "Red - Needs Clarification"
   },
   {
-    "row": 4798,
+    "row": 4829,
     "name": "Houston Ave. 6 - Story (Michael Maxson)",
     "location": "Texas",
     "address": "2109 Houston Ave, Houston TX 77007",
@@ -12580,7 +12886,7 @@
     "color_status": null
   },
   {
-    "row": 4825,
+    "row": 4856,
     "name": "4823 Titan Storage Norwalk",
     "location": null,
     "address": null,
@@ -12614,7 +12920,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 4851,
+    "row": 4882,
     "name": "4849 Cedar Port BTS",
     "location": null,
     "address": null,
@@ -12648,7 +12954,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 4877,
+    "row": 4908,
     "name": "4875 Empire Central - Mr. Sweeper BTS",
     "location": null,
     "address": null,
@@ -12682,7 +12988,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 4903,
+    "row": 4934,
     "name": "Skillen Self Storage Facility",
     "location": "New York",
     "address": "125 Skillen St, Buffalo, NY 14207",
@@ -12716,7 +13022,7 @@
     "color_status": null
   },
   {
-    "row": 4929,
+    "row": 4960,
     "name": "N. GRAHAM STREET SPEC",
     "location": "North Carolina",
     "address": "Charlette",
@@ -12750,7 +13056,7 @@
     "color_status": "Yellow - Quotation"
   },
   {
-    "row": 4955,
+    "row": 4986,
     "name": "Canopy- Grand Island NE-Toni",
     "location": "Nebraska",
     "address": "724 w 12th st Grand Island NE 68801",
@@ -12784,7 +13090,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 5008,
+    "row": 5039,
     "name": "5006 Blair Storage",
     "location": null,
     "address": null,
@@ -12818,7 +13124,7 @@
     "color_status": "Yellow - Quotation"
   },
   {
-    "row": 5061,
+    "row": 5092,
     "name": "Aurora CO Land",
     "location": null,
     "address": null,
@@ -12852,7 +13158,7 @@
     "color_status": null
   },
   {
-    "row": 5087,
+    "row": 5118,
     "name": "Lebanon, Oregon",
     "location": "Oregon",
     "address": "465 Hansard Ave, Lebanon, OR   97355",
@@ -12886,7 +13192,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 5114,
+    "row": 5145,
     "name": "Albany, Oregon",
     "location": "Oregon",
     "address": "162 41st Ave, Albany, OR   97321",
@@ -12920,7 +13226,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 5141,
+    "row": 5172,
     "name": "#5090-Alden Green House-Alden New York",
     "location": "New York",
     "address": "11580 Walden Ave, Alden, NY 14004 US",
@@ -12954,7 +13260,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 5168,
+    "row": 5199,
     "name": "#5124 Auburn Storage",
     "location": null,
     "address": null,
@@ -12988,7 +13294,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 5194,
+    "row": 5225,
     "name": "#5159 U-Haul Valdosta",
     "location": "Georgia",
     "address": null,
@@ -13022,7 +13328,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 5221,
+    "row": 5252,
     "name": "#5177 Anytime Self Storage",
     "location": "Oregon",
     "address": "HIGH BANK ROAD + 52ND STREET SPRINGFIELD, OREGON 97478",
@@ -13052,11 +13358,45 @@
     "contractor_date": null,
     "job_status": null,
     "comments": null,
-    "color": "0040B14B",
-    "color_status": "Green - Already Quoted"
+    "color": "00757575",
+    "color_status": null
   },
   {
-    "row": 5250,
+    "row": 5280,
+    "name": "Delta Construction (Dirtwork and Utilities)",
+    "location": null,
+    "address": null,
+    "label": null,
+    "quote_sent": true,
+    "reached_out": true,
+    "total_cogs": 1478980.0,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": null,
+    "color_status": null
+  },
+  {
+    "row": 5281,
     "name": "Jan 16",
     "location": null,
     "address": null,
@@ -13090,7 +13430,75 @@
     "color_status": null
   },
   {
-    "row": 5253,
+    "row": 5282,
+    "name": "Pacific Excavation",
+    "location": null,
+    "address": null,
+    "label": null,
+    "quote_sent": true,
+    "reached_out": true,
+    "total_cogs": 1907248.0,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": null,
+    "color_status": null
+  },
+  {
+    "row": 5287,
+    "name": "J&K Electric",
+    "location": null,
+    "address": null,
+    "label": null,
+    "quote_sent": true,
+    "reached_out": true,
+    "total_cogs": 157442.34,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": null,
+    "color_status": null
+  },
+  {
+    "row": 5288,
     "name": "Jan 20",
     "location": null,
     "address": null,
@@ -13124,7 +13532,41 @@
     "color_status": null
   },
   {
-    "row": 5255,
+    "row": 5289,
+    "name": "New Way Electric",
+    "location": null,
+    "address": null,
+    "label": null,
+    "quote_sent": true,
+    "reached_out": true,
+    "total_cogs": 436260.85,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": null,
+    "color_status": null
+  },
+  {
+    "row": 5290,
     "name": "Jan 21",
     "location": null,
     "address": null,
@@ -13158,8 +13600,110 @@
     "color_status": null
   },
   {
-    "row": 5258,
-    "name": "Jan 21",
+    "row": 5291,
+    "name": "Bohemia Electric",
+    "location": null,
+    "address": null,
+    "label": null,
+    "quote_sent": true,
+    "reached_out": true,
+    "total_cogs": 238952.0,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": null,
+    "color_status": null
+  },
+  {
+    "row": 5293,
+    "name": "Sunset Electric",
+    "location": null,
+    "address": null,
+    "label": null,
+    "quote_sent": true,
+    "reached_out": true,
+    "total_cogs": 269457.0,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": null,
+    "color_status": null
+  },
+  {
+    "row": 5295,
+    "name": "L.R. Brabham",
+    "location": null,
+    "address": null,
+    "label": null,
+    "quote_sent": true,
+    "reached_out": true,
+    "total_cogs": 309719.0,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": null,
+    "color_status": null
+  },
+  {
+    "row": 5298,
+    "name": "ASP Enterprises",
     "location": null,
     "address": null,
     "label": null,
@@ -13192,9 +13736,281 @@
     "color_status": null
   },
   {
-    "row": 5259,
-    "name": "#5208 Texas Motor Sports PEMB - Nolanville, TX",
+    "row": 5301,
+    "name": "Delta Sand & Gravel",
     "location": null,
+    "address": null,
+    "label": null,
+    "quote_sent": true,
+    "reached_out": true,
+    "total_cogs": null,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": null,
+    "color_status": null
+  },
+  {
+    "row": 5302,
+    "name": "Riverbend Materials",
+    "location": null,
+    "address": null,
+    "label": null,
+    "quote_sent": true,
+    "reached_out": true,
+    "total_cogs": null,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": null,
+    "color_status": null
+  },
+  {
+    "row": 5303,
+    "name": "Lane Forest Products",
+    "location": null,
+    "address": null,
+    "label": null,
+    "quote_sent": true,
+    "reached_out": true,
+    "total_cogs": null,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": null,
+    "color_status": null
+  },
+  {
+    "row": 5304,
+    "name": "Coburg Road Quarry",
+    "location": null,
+    "address": null,
+    "label": null,
+    "quote_sent": true,
+    "reached_out": true,
+    "total_cogs": null,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": null,
+    "color_status": null
+  },
+  {
+    "row": 5305,
+    "name": "Conser Quarry",
+    "location": null,
+    "address": null,
+    "label": null,
+    "quote_sent": true,
+    "reached_out": true,
+    "total_cogs": null,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": null,
+    "color_status": null
+  },
+  {
+    "row": 5306,
+    "name": "Aggregate Resource Industries",
+    "location": null,
+    "address": null,
+    "label": null,
+    "quote_sent": true,
+    "reached_out": true,
+    "total_cogs": null,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": null,
+    "color_status": null
+  },
+  {
+    "row": 5307,
+    "name": "Wildish Sand & Gravel",
+    "location": null,
+    "address": null,
+    "label": null,
+    "quote_sent": true,
+    "reached_out": true,
+    "total_cogs": null,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": null,
+    "color_status": null
+  },
+  {
+    "row": 5308,
+    "name": "Bond Butte Quarry",
+    "location": null,
+    "address": null,
+    "label": null,
+    "quote_sent": true,
+    "reached_out": true,
+    "total_cogs": null,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": null,
+    "color_status": null
+  },
+  {
+    "row": 5309,
+    "name": "#5208 Texas Motor Sports PEMB - Nolanville, TX",
+    "location": "Texas",
     "address": null,
     "label": null,
     "quote_sent": false,
@@ -13226,7 +14042,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 5285,
+    "row": 5335,
     "name": "#5234 Albany, NY Storage Conversion Volta-Toni",
     "location": "New York",
     "address": null,
@@ -13260,7 +14076,7 @@
     "color_status": "Orange"
   },
   {
-    "row": 5311,
+    "row": 5361,
     "name": "#5260 Robert Samson",
     "location": null,
     "address": null,
@@ -13294,7 +14110,7 @@
     "color_status": "Yellow - Quotation"
   },
   {
-    "row": 5337,
+    "row": 5387,
     "name": "#5287 Springfield CC Storage",
     "location": "Missouri",
     "address": null,
@@ -13328,7 +14144,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 5364,
+    "row": 5414,
     "name": "#5315 Yellow Brick RV Storage",
     "location": "Texas",
     "address": null,
@@ -13362,9 +14178,9 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 5390,
+    "row": 5440,
     "name": "#5342 Moline Illinois",
-    "location": null,
+    "location": "Illinois",
     "address": null,
     "label": null,
     "quote_sent": false,
@@ -13396,7 +14212,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 5416,
+    "row": 5466,
     "name": "#5370 Best Boat & RV Expansion, Tuttle, OK-Toni",
     "location": "Oklahoma",
     "address": "1736 County Rd 1210, Tuttle, OK 73089",
@@ -13426,11 +14242,11 @@
     "contractor_date": null,
     "job_status": null,
     "comments": null,
-    "color": "0040B14B",
+    "color": "007ED085",
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 5442,
+    "row": 5492,
     "name": "#5398 Chicago Ridge Self Storage",
     "location": "Illinois",
     "address": "Chicago Ridge",
@@ -13464,7 +14280,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 5468,
+    "row": 5518,
     "name": "#5424 Atlanta Area RV Storage-Toni",
     "location": "Georgia",
     "address": "Atlanta area",
@@ -13498,8 +14314,8 @@
     "color_status": null
   },
   {
-    "row": 5494,
-    "name": "#5424 Filbert Highway Storage Expansion",
+    "row": 5544,
+    "name": "#5425 Filbert Highway Storage Expansion",
     "location": "South Carolina",
     "address": "York",
     "label": null,
@@ -13532,7 +14348,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 5520,
+    "row": 5573,
     "name": "#5477 Stacked Storage - Hoover Street: Self Storage Units",
     "location": "Michigan",
     "address": "20850 Hoover Street, Detroit, MI 48205",
@@ -13562,11 +14378,11 @@
     "contractor_date": null,
     "job_status": null,
     "comments": null,
-    "color": null,
+    "color": "00757575",
     "color_status": null
   },
   {
-    "row": 5546,
+    "row": 5599,
     "name": "#5503 Lloyd Lane Storage Houston",
     "location": "Texas",
     "address": null,
@@ -13600,7 +14416,7 @@
     "color_status": "Yellow - Quotation"
   },
   {
-    "row": 5572,
+    "row": 5625,
     "name": "Moravia",
     "location": "Iowa",
     "address": null,
@@ -13634,7 +14450,7 @@
     "color_status": "Yellow - Quotation"
   },
   {
-    "row": 5598,
+    "row": 5651,
     "name": "#5568 Clay Townhouse Roof",
     "location": null,
     "address": null,
@@ -13668,7 +14484,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 5624,
+    "row": 5677,
     "name": "#5594 Extra Space Bridgewater MA",
     "location": null,
     "address": null,
@@ -13698,11 +14514,11 @@
     "contractor_date": null,
     "job_status": null,
     "comments": null,
-    "color": "00FEFF85",
-    "color_status": "Yellow - Quotation"
+    "color": "0040B14B",
+    "color_status": "Green - Already Quoted"
   },
   {
-    "row": 5650,
+    "row": 5703,
     "name": "#5620 Storage King League City",
     "location": "Texas",
     "address": "2615 State Hwy 3League City, TX 77573",
@@ -13736,7 +14552,7 @@
     "color_status": "Green - Already Quoted"
   },
   {
-    "row": 5676,
+    "row": 5729,
     "name": "#5649 Springfield MO Small Bay Industrial",
     "location": "Missouri",
     "address": "W Republic Rd, Springfield, MO 65810",
@@ -13770,10 +14586,10 @@
     "color_status": null
   },
   {
-    "row": 5702,
+    "row": 5755,
     "name": "#5675 Multi-tenant Bldg 3 Project",
-    "location": null,
-    "address": null,
+    "location": "New Hampshire",
+    "address": "77 Nashua Rd, Sharon, NH 03458",
     "label": null,
     "quote_sent": false,
     "reached_out": false,
@@ -13804,7 +14620,7 @@
     "color_status": null
   },
   {
-    "row": 5728,
+    "row": 5782,
     "name": "#5706 12235 Oakland St, Brighton, CO",
     "location": "Colorado",
     "address": "12235 Oakland St, Brighton, CO",
@@ -13834,11 +14650,79 @@
     "contractor_date": null,
     "job_status": null,
     "comments": null,
-    "color": null,
-    "color_status": null
+    "color": "00FEFF85",
+    "color_status": "Yellow - Quotation"
   },
   {
-    "row": 5832,
+    "row": 5834,
+    "name": "5774 Crash Champions Denton PEMB",
+    "location": null,
+    "address": null,
+    "label": null,
+    "quote_sent": false,
+    "reached_out": false,
+    "total_cogs": null,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": "00237F2E",
+    "color_status": "Green - Already Quoted"
+  },
+  {
+    "row": 5860,
+    "name": "5800 Crash Champions Buda PEMB",
+    "location": null,
+    "address": null,
+    "label": null,
+    "quote_sent": false,
+    "reached_out": false,
+    "total_cogs": null,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": "00237F2E",
+    "color_status": "Green - Already Quoted"
+  },
+  {
+    "row": 5886,
     "name": "#5828 Ponzio Boat & RV Storage, MI-Toni",
     "location": "Michigan",
     "address": "5739 County Line Rd Casco Twp, MI 48064",
@@ -13852,6 +14736,584 @@
     "build_size": null,
     "zip_code": "48064.0",
     "project_type": "Large Bays\nRV/Boat",
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": "0040B14B",
+    "color_status": "Green - Already Quoted"
+  },
+  {
+    "row": 5912,
+    "name": "#5857 StorPlace - Tulip Poplar / Gallatin",
+    "location": "Tennessee",
+    "address": "1172 TULIP POPLAR DRIVE\nGALLATIN, TN 37066",
+    "label": null,
+    "quote_sent": false,
+    "reached_out": false,
+    "total_cogs": null,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": "00FEFF85",
+    "color_status": "Yellow - Quotation"
+  },
+  {
+    "row": 5938,
+    "name": "#5883 La Marque Gas Station PEMB",
+    "location": "Texas",
+    "address": "Texas Avenue & Delaney Road, La Marque Texas 77568",
+    "label": null,
+    "quote_sent": false,
+    "reached_out": false,
+    "total_cogs": null,
+    "customer": "M. Rafay Akhter",
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": null,
+    "color_status": null
+  },
+  {
+    "row": 5964,
+    "name": "#5190 Building Expansion Bellevue NE",
+    "location": "Nebraska",
+    "address": "3220 Samson Way, Bellevue, NE 68123",
+    "label": null,
+    "quote_sent": false,
+    "reached_out": false,
+    "total_cogs": null,
+    "customer": "Shawn Smith",
+    "phone": "651 353 9515",
+    "email": "ssmith@wildamere.com",
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": null,
+    "color_status": null
+  },
+  {
+    "row": 5992,
+    "name": "#5955 El Dorado Hills Storage / El Dorado Hills",
+    "location": "California",
+    "address": "Latrobe Rd, El Dorado Hills, CA 95762 US",
+    "label": null,
+    "quote_sent": false,
+    "reached_out": false,
+    "total_cogs": null,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": "0040B14B",
+    "color_status": "Green - Already Quoted"
+  },
+  {
+    "row": 6018,
+    "name": "Speedshore PEMB - Slate Construction",
+    "location": "Texas",
+    "address": null,
+    "label": null,
+    "quote_sent": false,
+    "reached_out": false,
+    "total_cogs": null,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": "00EA352E",
+    "color_status": "Red - Needs Clarification"
+  },
+  {
+    "row": 6044,
+    "name": "#6016 Columbia TX Covered RV/Boat",
+    "location": null,
+    "address": null,
+    "label": null,
+    "quote_sent": false,
+    "reached_out": false,
+    "total_cogs": null,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": "00757575",
+    "color_status": null
+  },
+  {
+    "row": 6070,
+    "name": "#6068 Edmond Storage-Toni",
+    "location": "Oklahoma",
+    "address": "3001 S. Sara Rd. Yukon, OK 73099",
+    "label": "2025 New Lead",
+    "quote_sent": false,
+    "reached_out": false,
+    "total_cogs": null,
+    "customer": "Austin McClune (GC)",
+    "phone": "405-476-2298",
+    "email": "mcclunecd@gmail.com",
+    "build_size": null,
+    "zip_code": "73099.0",
+    "project_type": "Drive Up +CC",
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": "007ED085",
+    "color_status": "Green - Already Quoted"
+  },
+  {
+    "row": 6096,
+    "name": "#6067 Jamie Aaron",
+    "location": "New Hampshire",
+    "address": "Loudon",
+    "label": null,
+    "quote_sent": false,
+    "reached_out": false,
+    "total_cogs": null,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": "0040B14B",
+    "color_status": "Green - Already Quoted"
+  },
+  {
+    "row": 6122,
+    "name": "#6093 Prime Storage - Stephens Rd.",
+    "location": "Michigan",
+    "address": "16410 Stephens Road, Eastpointe MI 48021",
+    "label": null,
+    "quote_sent": false,
+    "reached_out": false,
+    "total_cogs": null,
+    "customer": "Evan Ganzer",
+    "phone": "630-864-8987",
+    "email": "evan.ganzer@deangelisdiamond.com",
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": "00757575",
+    "color_status": null
+  },
+  {
+    "row": 6148,
+    "name": "#6117 Choctaw Building J-Toni",
+    "location": "Oklahoma",
+    "address": "14237 SE 29th St Choctaw, OK 73020",
+    "label": "2025 Active project",
+    "quote_sent": true,
+    "reached_out": false,
+    "total_cogs": null,
+    "customer": "Austin McClune (GC)",
+    "phone": "405-476-2298",
+    "email": "mcclunecd@gmail.com",
+    "build_size": null,
+    "zip_code": "73020.0",
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": "0040B14B",
+    "color_status": "Green - Already Quoted"
+  },
+  {
+    "row": 6174,
+    "name": "#6147 MAK Potato Storage",
+    "location": "North Dakota",
+    "address": null,
+    "label": null,
+    "quote_sent": false,
+    "reached_out": false,
+    "total_cogs": null,
+    "customer": "Marc with MAK Storage",
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": "00757575",
+    "color_status": null
+  },
+  {
+    "row": 6200,
+    "name": "#6173 MAK Industrial Spec building GF",
+    "location": "North Dakota",
+    "address": null,
+    "label": null,
+    "quote_sent": false,
+    "reached_out": false,
+    "total_cogs": null,
+    "customer": "Marc with MAK Storage",
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": "0040B14B",
+    "color_status": "Green - Already Quoted"
+  },
+  {
+    "row": 6226,
+    "name": "#6201 Extra Space Storage / Frederick",
+    "location": null,
+    "address": null,
+    "label": null,
+    "quote_sent": false,
+    "reached_out": false,
+    "total_cogs": null,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": "00757575",
+    "color_status": null
+  },
+  {
+    "row": 6252,
+    "name": "Warehouse Conversion",
+    "location": null,
+    "address": null,
+    "label": null,
+    "quote_sent": false,
+    "reached_out": false,
+    "total_cogs": null,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": "0040B14B",
+    "color_status": "Green - Already Quoted"
+  },
+  {
+    "row": 6278,
+    "name": "#6265 Mesquite, NV Big Storage Development Project-Toni",
+    "location": "Nevada",
+    "address": "36\u00b049'09.3\"N 114\u00b003'18.2\"W",
+    "label": "2025 Active Bid",
+    "quote_sent": false,
+    "reached_out": false,
+    "total_cogs": null,
+    "customer": "Jack Phillips",
+    "phone": "435-414-4576",
+    "email": "jackphillips.bsv@gmail.com",
+    "build_size": "29,125 cc/ncc  9,462 RV",
+    "zip_code": "89027.0",
+    "project_type": "Drive Up +CC\nRV/Boat",
+    "project_sqft": 38587.0,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": "00FEFF85",
+    "color_status": "Yellow - Quotation"
+  },
+  {
+    "row": 6304,
+    "name": "#6301 25th & Peoria Storage Expansion - Jack",
+    "location": "Arizona",
+    "address": "10425 N 25th Ave, Phoenix, AZ 85021 US",
+    "label": null,
+    "quote_sent": false,
+    "reached_out": false,
+    "total_cogs": null,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
+    "project_sqft": null,
+    "our_quote_material": null,
+    "sales_tax": null,
+    "our_quote_with_tax": null,
+    "quote_accepted": null,
+    "deposit_paid": null,
+    "drawings_status": null,
+    "est_metal_date": null,
+    "door_order_date": null,
+    "est_door_date": null,
+    "metal_production": null,
+    "metal_delivery": null,
+    "door_delivery": null,
+    "contractor_date": null,
+    "job_status": null,
+    "comments": null,
+    "color": "00FEFF85",
+    "color_status": "Yellow - Quotation"
+  },
+  {
+    "row": 6330,
+    "name": "#6327 Buda Self Storage - Jack",
+    "location": "Texas",
+    "address": "12818 Wright Rd, Buda, TX 78610 US",
+    "label": null,
+    "quote_sent": false,
+    "reached_out": false,
+    "total_cogs": null,
+    "customer": null,
+    "phone": null,
+    "email": null,
+    "build_size": null,
+    "zip_code": null,
+    "project_type": null,
     "project_sqft": null,
     "our_quote_material": null,
     "sales_tax": null,

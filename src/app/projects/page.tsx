@@ -20,8 +20,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Search, X, Star } from "lucide-react";
+import { Search, X, Star, Download } from "lucide-react";
 import { useFavorites } from "@/hooks/use-favorites";
+import { exportProjectsToExcel } from "@/lib/export-to-excel";
 import Link from "next/link";
 
 export default function ProjectsPage() {
@@ -142,6 +143,14 @@ export default function ProjectsPage() {
               Clear Filters
             </Button>
           )}
+          <Button 
+            variant="outline" 
+            onClick={() => exportProjectsToExcel(projects)}
+            className="gap-2"
+          >
+            <Download className="h-4 w-4" />
+            Export to Excel
+          </Button>
         </div>
         <div className="flex flex-wrap gap-2">
           <Select value={labelFilter} onValueChange={setLabelFilter}>

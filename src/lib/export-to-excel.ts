@@ -199,6 +199,39 @@ export function exportProjectsToExcel(projects: Project[]): void {
   filterSheet['!cols'] = [{ wch: 20 }, { wch: 50 }];
   XLSX.utils.book_append_sheet(workbook, filterSheet, 'Filter Options');
 
+  // Add Instructions sheet
+  const instructions = [
+    { 'Step': '📋 SMARTSHEET SETUP INSTRUCTIONS', 'Details': '' },
+    { 'Step': '', 'Details': '' },
+    { 'Step': '1. Import this Excel file', 'Details': 'File > Import > Browse for this file' },
+    { 'Step': '', 'Details': '' },
+    { 'Step': '2. Create Hierarchy (Collapsible Groups)', 'Details': '' },
+    { 'Step': '   a. Find category rows', 'Details': 'Look for rows like "2025 Active Projects", "2025 Active Bids", etc.' },
+    { 'Step': '   b. Select child rows', 'Details': 'Select all project rows UNDER each category row' },
+    { 'Step': '   c. Indent them', 'Details': 'Right-click > Indent (or press Ctrl + ])' },
+    { 'Step': '   d. Repeat for each category', 'Details': 'This creates the collapsible + buttons' },
+    { 'Step': '', 'Details': '' },
+    { 'Step': '3. Set Up Filters', 'Details': '' },
+    { 'Step': '   a. Click Filter icon', 'Details': 'In the toolbar, click the Filter button' },
+    { 'Step': '   b. Add filters', 'Details': 'Filter by Category, Quote Sent, Location, etc.' },
+    { 'Step': '', 'Details': '' },
+    { 'Step': '4. Set Up Dropdown Columns (Optional)', 'Details': '' },
+    { 'Step': '   a. Right-click column header', 'Details': 'e.g., "Quote Sent" or "Deposit Paid"' },
+    { 'Step': '   b. Edit Column Properties', 'Details': 'Change type to "Dropdown List"' },
+    { 'Step': '   c. Add values', 'Details': 'Use values from "Filter Options" sheet' },
+    { 'Step': '', 'Details': '' },
+    { 'Step': '5. Switch to Card View (Optional)', 'Details': '' },
+    { 'Step': '   a. Click Card button', 'Details': 'In toolbar, next to Grid' },
+    { 'Step': '   b. Group by Category', 'Details': 'Click "View by..." dropdown > select Category' },
+    { 'Step': '', 'Details': '' },
+    { 'Step': '📊 DASHBOARD SUMMARY (Rows 1-4)', 'Details': 'Shows total projects, quote values, and key stats' },
+    { 'Step': '🔍 FILTER OPTIONS (Rows 6-10)', 'Details': 'Reference for available filter values' },
+    { 'Step': '📁 CATEGORY ROWS', 'Details': 'Parent rows showing project count and total quote value per category' },
+  ];
+  const instructionsSheet = XLSX.utils.json_to_sheet(instructions);
+  instructionsSheet['!cols'] = [{ wch: 35 }, { wch: 60 }];
+  XLSX.utils.book_append_sheet(workbook, instructionsSheet, 'Instructions');
+
   // Generate filename with date
   const date = new Date().toISOString().split('T')[0];
   const filename = `Storage_Materials_Export_${date}.xlsx`;

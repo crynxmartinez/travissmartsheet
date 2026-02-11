@@ -73,9 +73,9 @@ function projectToRow(project: Project, year: string): ExportRow {
   const stage = getKanbanStage(project);
   
   return {
+    'Project Name': cleanName,
     'Year': year,
     'Stage': stage,
-    'Project Name': cleanName,
     'Assigned To': assignedTo || project.customer || '',
     'Customer': project.customer || '',
     'Phone': project.phone || '',
@@ -139,14 +139,14 @@ export function exportProjectsToExcel(projects: Project[]): void {
   
   // Helper to create empty row
   const emptyRow = (): ExportRow => ({
-    'Year': '', 'Stage': '', 'Project Name': '', 'Assigned To': '', 'Customer': '', 'Phone': '', 'Email': '', 'Location': '', 'Address': '', 'Zip Code': '', 'Project Type': '', 'Build Size': '', 'SQFT': null, 'Quote Sent': '', 'Reached Out': '', 'Quote (Material)': null, 'Quote (With Tax)': null, 'Quote Accepted': '', 'Deposit Paid': '', 'Drawings Status': '', 'Est. Metal Delivery': '', 'Metal Production': '', 'Metal Delivery': '', 'Door Delivery': '', 'Contractor Start': '', 'Job Status': '', 'Comments': ''
+    'Project Name': '', 'Year': '', 'Stage': '', 'Assigned To': '', 'Customer': '', 'Phone': '', 'Email': '', 'Location': '', 'Address': '', 'Zip Code': '', 'Project Type': '', 'Build Size': '', 'SQFT': null, 'Quote Sent': '', 'Reached Out': '', 'Quote (Material)': null, 'Quote (With Tax)': null, 'Quote Accepted': '', 'Deposit Paid': '', 'Drawings Status': '', 'Est. Metal Delivery': '', 'Metal Production': '', 'Metal Delivery': '', 'Door Delivery': '', 'Contractor Start': '', 'Job Status': '', 'Comments': ''
   });
   
   // Dashboard Summary Section
-  rows.push({ ...emptyRow(), 'Year': '📊 DASHBOARD SUMMARY' });
-  rows.push({ ...emptyRow(), 'Year': 'Total Projects', 'Stage': String(totalProjects), 'Project Name': 'Total Quote Value', 'Assigned To': `$${totalQuoteValue.toLocaleString()}` });
-  rows.push({ ...emptyRow(), 'Year': 'Quote Sent (Yes)', 'Stage': String(quoteSentYes), 'Project Name': 'Quote Sent (No)', 'Assigned To': String(quoteSentNo) });
-  rows.push({ ...emptyRow(), 'Year': 'Deposit Paid', 'Stage': String(depositPaidCount) });
+  rows.push({ ...emptyRow(), 'Project Name': '📊 DASHBOARD SUMMARY' });
+  rows.push({ ...emptyRow(), 'Project Name': 'Total Projects', 'Year': String(totalProjects), 'Stage': 'Total Quote Value', 'Assigned To': `$${totalQuoteValue.toLocaleString()}` });
+  rows.push({ ...emptyRow(), 'Project Name': 'Quote Sent (Yes)', 'Year': String(quoteSentYes), 'Stage': 'Quote Sent (No)', 'Assigned To': String(quoteSentNo) });
+  rows.push({ ...emptyRow(), 'Project Name': 'Deposit Paid', 'Year': String(depositPaidCount) });
   rows.push(emptyRow());
 
   // Add projects grouped by year
@@ -159,9 +159,9 @@ export function exportProjectsToExcel(projects: Project[]): void {
       // Add year parent row with summary
       rows.push({ 
         ...emptyRow(),
-        'Year': `Projects ${year}`, 
-        'Stage': '', 
-        'Project Name': `${yearProjects.length} projects`, 
+        'Project Name': `Projects ${year}`, 
+        'Year': '', 
+        'Stage': `${yearProjects.length} projects`, 
         'Quote (With Tax)': yearTotal > 0 ? yearTotal : null,
       });
       
@@ -177,9 +177,9 @@ export function exportProjectsToExcel(projects: Project[]): void {
   
   // Set column widths
   worksheet['!cols'] = [
+    { wch: 45 },  // Project Name
     { wch: 15 },  // Year
     { wch: 15 },  // Stage
-    { wch: 45 },  // Project Name
     { wch: 15 },  // Assigned To
     { wch: 20 },  // Customer
     { wch: 15 },  // Phone

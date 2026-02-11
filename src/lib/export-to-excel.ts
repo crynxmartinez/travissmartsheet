@@ -3,25 +3,80 @@ import { Project } from './types';
 
 type ExportRow = Record<string, string | number | null>;
 
-function categorizeProject(project: Project): string {
-  // Check label first
-  if (project.projectLabel === '2025 Active project') return '2025 Active Projects';
-  if (project.projectLabel === '2025 Active Bid') return '2025 Active Bids';
-  if (project.projectLabel === '2025 New Lead') return '2025 New Leads';
+// Extract year from project data
+function getProjectYear(project: Project): number {
+  // Check label for year
+  if (project.projectLabel?.includes('2025')) return 2025;
+  if (project.projectLabel?.includes('2024')) return 2024;
+  if (project.projectLabel?.includes('2026')) return 2026;
   
-  // Check color status
-  if (project.colorStatus?.includes('Red') || project.colorStatus?.includes('Needs Clarification')) return 'Needs Clarification';
-  if (project.colorStatus?.includes('Green') || project.colorStatus?.includes('Already Quoted')) return 'Already Quoted';
-  if (project.colorStatus?.includes('Yellow') || project.colorStatus?.includes('Quotation')) return 'Pending Quotation';
-  if (project.colorStatus?.includes('Brown') || project.colorStatus?.includes('Ongoing')) return 'Ongoing Projects';
+  // Check dates for year
+  const dates = [
+    project.estimatedMetalDeliveryDate,
+    project.contractorStartDate,
+    project.doorOrderSubmittedDate,
+    project.estimatedDoorDeliveryDate,
+  ];
   
-  return 'No Status';
+  for (const dateStr of dates) {
+    if (dateStr) {
+      const yearMatch = dateStr.match(/202[3-6]/);
+      if (yearMatch) return parseInt(yearMatch[0]);
+    }
+  }
+  
+  // Use row number as proxy (higher = newer)
+  // Rows 1-150 = 2023, 150-300 = 2024, 300+ = 2025
+  if (project.id > 300) return 2025;
+  if (project.id > 150) return 2024;
+  return 2023;
 }
 
-function projectToRow(project: Project, category: string): ExportRow {
+// Extract contact name from project title (e.g., "-Toni", "- Austin")
+function extractContactFromTitle(projectName: string): { cleanName: string; assignedTo: string } {
+  // Common patterns: "-Toni", "- Toni", "-Austin", "J-Toni"
+  const contactPatterns = [
+    /[-–]\s*(Toni|Austin|Chris|John|Mike|Brad|Paul|Ron|Joe|Ken|Steve|Kyle|Adam|Gary|Shane|Daniel|Dilip|Zak|Brian|Andrew|Brent|Jack|Brandy)\s*$/i,
+    /\s+(Toni|Austin)\s*$/i,
+  ];
+  
+  let cleanName = projectName;
+  let assignedTo = '';
+  
+  for (const pattern of contactPatterns) {
+    const match = projectName.match(pattern);
+    if (match) {
+      assignedTo = match[1];
+      cleanName = projectName.replace(pattern, '').trim();
+      break;
+    }
+  }
+  
+  return { cleanName, assignedTo };
+}
+
+// Determine Kanban stage from project data
+function getKanbanStage(project: Project): string {
+  // Check from most advanced stage to least
+  if (project.metalDelivery || project.doorDelivery) return 'Delivered';
+  if (project.metalProduction) return 'In Production';
+  if (project.depositPaid === 'Paid') return 'Deposit Paid';
+  if (project.quoteAcceptedDeclined?.toLowerCase().includes('accept')) return 'Quote Accepted';
+  if (project.quoteSent) return 'Quote Sent';
+  if (project.reachedOut) return 'Reached Out';
+  if (project.projectLabel?.includes('New Lead')) return 'New Lead';
+  return 'Unassigned';
+}
+
+function projectToRow(project: Project, year: string): ExportRow {
+  const { cleanName, assignedTo } = extractContactFromTitle(project.projectName);
+  const stage = getKanbanStage(project);
+  
   return {
-    'Category': category,
-    'Project Name': project.projectName,
+    'Year': year,
+    'Stage': stage,
+    'Project Name': cleanName,
+    'Assigned To': assignedTo || project.customer || '',
     'Customer': project.customer || '',
     'Phone': project.phone || '',
     'Email': project.email || '',
@@ -50,21 +105,19 @@ function projectToRow(project: Project, category: string): ExportRow {
 
 
 export function exportProjectsToExcel(projects: Project[]): void {
-  // Group projects by category
-  const categories: Record<string, Project[]> = {
-    '2025 Active Projects': [],
-    '2025 Active Bids': [],
-    '2025 New Leads': [],
-    'Needs Clarification': [],
-    'Already Quoted': [],
-    'Pending Quotation': [],
-    'Ongoing Projects': [],
-    'No Status': [],
-  };
-
+  // Group projects by year
+  const projectsByYear: Record<number, Project[]> = {};
+  
   projects.forEach((project) => {
-    const category = categorizeProject(project);
-    categories[category].push(project);
+    const year = getProjectYear(project);
+    if (!projectsByYear[year]) projectsByYear[year] = [];
+    projectsByYear[year].push(project);
+  });
+
+  // Sort years descending (newest first) and sort projects within each year by id descending
+  const years = Object.keys(projectsByYear).map(Number).sort((a, b) => b - a);
+  years.forEach(year => {
+    projectsByYear[year].sort((a, b) => b.id - a.id);
   });
 
   // Calculate stats
@@ -72,82 +125,48 @@ export function exportProjectsToExcel(projects: Project[]): void {
   const totalQuoteValue = projects.reduce((sum, p) => sum + (p.ourQuoteWithTax || 0), 0);
   const quoteSentYes = projects.filter(p => p.quoteSent).length;
   const quoteSentNo = projects.filter(p => !p.quoteSent).length;
-  const depositPaid = projects.filter(p => p.depositPaid === 'Paid').length;
+  const depositPaidCount = projects.filter(p => p.depositPaid === 'Paid').length;
   
   // Get unique values for filters
-  const uniqueLabels = [...new Set(projects.map(p => p.projectLabel).filter(Boolean))];
-  const uniqueStatuses = [...new Set(projects.map(p => p.colorStatus).filter(Boolean))];
   const uniqueStates = [...new Set(projects.map(p => p.location).filter(Boolean))].sort();
   const uniqueCustomers = [...new Set(projects.map(p => p.customer).filter(Boolean))].sort().slice(0, 20);
+  
+  // Kanban stages for dropdown
+  const kanbanStages = ['Unassigned', 'New Lead', 'Reached Out', 'Quote Sent', 'Quote Accepted', 'Deposit Paid', 'In Production', 'Delivered'];
 
   // Build rows
   const rows: ExportRow[] = [];
   
+  // Helper to create empty row
+  const emptyRow = (): ExportRow => ({
+    'Year': '', 'Stage': '', 'Project Name': '', 'Assigned To': '', 'Customer': '', 'Phone': '', 'Email': '', 'Location': '', 'Address': '', 'Zip Code': '', 'Project Type': '', 'Build Size': '', 'SQFT': null, 'Quote Sent': '', 'Reached Out': '', 'Quote (Material)': null, 'Quote (With Tax)': null, 'Quote Accepted': '', 'Deposit Paid': '', 'Drawings Status': '', 'Est. Metal Delivery': '', 'Metal Production': '', 'Metal Delivery': '', 'Door Delivery': '', 'Contractor Start': '', 'Job Status': '', 'Comments': ''
+  });
+  
   // Dashboard Summary Section
-  rows.push({ 'Category': '📊 DASHBOARD SUMMARY', 'Project Name': '', 'Customer': '', 'Phone': '', 'Email': '', 'Location': '', 'Address': '', 'Zip Code': '', 'Project Type': '', 'Build Size': '', 'SQFT': null, 'Quote Sent': '', 'Reached Out': '', 'Quote (Material)': null, 'Quote (With Tax)': null, 'Quote Accepted': '', 'Deposit Paid': '', 'Drawings Status': '', 'Est. Metal Delivery': '', 'Metal Production': '', 'Metal Delivery': '', 'Door Delivery': '', 'Contractor Start': '', 'Job Status': '', 'Comments': '' });
-  rows.push({ 'Category': 'Total Projects', 'Project Name': String(totalProjects), 'Customer': 'Total Quote Value', 'Phone': `$${totalQuoteValue.toLocaleString()}`, 'Email': '', 'Location': '', 'Address': '', 'Zip Code': '', 'Project Type': '', 'Build Size': '', 'SQFT': null, 'Quote Sent': '', 'Reached Out': '', 'Quote (Material)': null, 'Quote (With Tax)': null, 'Quote Accepted': '', 'Deposit Paid': '', 'Drawings Status': '', 'Est. Metal Delivery': '', 'Metal Production': '', 'Metal Delivery': '', 'Door Delivery': '', 'Contractor Start': '', 'Job Status': '', 'Comments': '' });
-  rows.push({ 'Category': 'Quote Sent (Yes)', 'Project Name': String(quoteSentYes), 'Customer': 'Quote Sent (No)', 'Phone': String(quoteSentNo), 'Email': '', 'Location': '', 'Address': '', 'Zip Code': '', 'Project Type': '', 'Build Size': '', 'SQFT': null, 'Quote Sent': '', 'Reached Out': '', 'Quote (Material)': null, 'Quote (With Tax)': null, 'Quote Accepted': '', 'Deposit Paid': '', 'Drawings Status': '', 'Est. Metal Delivery': '', 'Metal Production': '', 'Metal Delivery': '', 'Door Delivery': '', 'Contractor Start': '', 'Job Status': '', 'Comments': '' });
-  rows.push({ 'Category': 'Deposit Paid', 'Project Name': String(depositPaid), 'Customer': '', 'Phone': '', 'Email': '', 'Location': '', 'Address': '', 'Zip Code': '', 'Project Type': '', 'Build Size': '', 'SQFT': null, 'Quote Sent': '', 'Reached Out': '', 'Quote (Material)': null, 'Quote (With Tax)': null, 'Quote Accepted': '', 'Deposit Paid': '', 'Drawings Status': '', 'Est. Metal Delivery': '', 'Metal Production': '', 'Metal Delivery': '', 'Door Delivery': '', 'Contractor Start': '', 'Job Status': '', 'Comments': '' });
-  
-  // Filter Options Row
-  rows.push({ 'Category': '', 'Project Name': '', 'Customer': '', 'Phone': '', 'Email': '', 'Location': '', 'Address': '', 'Zip Code': '', 'Project Type': '', 'Build Size': '', 'SQFT': null, 'Quote Sent': '', 'Reached Out': '', 'Quote (Material)': null, 'Quote (With Tax)': null, 'Quote Accepted': '', 'Deposit Paid': '', 'Drawings Status': '', 'Est. Metal Delivery': '', 'Metal Production': '', 'Metal Delivery': '', 'Door Delivery': '', 'Contractor Start': '', 'Job Status': '', 'Comments': '' });
-  rows.push({ 'Category': '🔍 FILTER OPTIONS', 'Project Name': `Labels: ${uniqueLabels.join(', ')}`, 'Customer': '', 'Phone': '', 'Email': '', 'Location': '', 'Address': '', 'Zip Code': '', 'Project Type': '', 'Build Size': '', 'SQFT': null, 'Quote Sent': '', 'Reached Out': '', 'Quote (Material)': null, 'Quote (With Tax)': null, 'Quote Accepted': '', 'Deposit Paid': '', 'Drawings Status': '', 'Est. Metal Delivery': '', 'Metal Production': '', 'Metal Delivery': '', 'Door Delivery': '', 'Contractor Start': '', 'Job Status': '', 'Comments': '' });
-  rows.push({ 'Category': '', 'Project Name': `Statuses: ${uniqueStatuses.join(', ')}`, 'Customer': '', 'Phone': '', 'Email': '', 'Location': '', 'Address': '', 'Zip Code': '', 'Project Type': '', 'Build Size': '', 'SQFT': null, 'Quote Sent': '', 'Reached Out': '', 'Quote (Material)': null, 'Quote (With Tax)': null, 'Quote Accepted': '', 'Deposit Paid': '', 'Drawings Status': '', 'Est. Metal Delivery': '', 'Metal Production': '', 'Metal Delivery': '', 'Door Delivery': '', 'Contractor Start': '', 'Job Status': '', 'Comments': '' });
-  rows.push({ 'Category': '', 'Project Name': `States: ${uniqueStates.slice(0, 15).join(', ')}...`, 'Customer': '', 'Phone': '', 'Email': '', 'Location': '', 'Address': '', 'Zip Code': '', 'Project Type': '', 'Build Size': '', 'SQFT': null, 'Quote Sent': '', 'Reached Out': '', 'Quote (Material)': null, 'Quote (With Tax)': null, 'Quote Accepted': '', 'Deposit Paid': '', 'Drawings Status': '', 'Est. Metal Delivery': '', 'Metal Production': '', 'Metal Delivery': '', 'Door Delivery': '', 'Contractor Start': '', 'Job Status': '', 'Comments': '' });
-  rows.push({ 'Category': '', 'Project Name': `Customers: ${uniqueCustomers.slice(0, 10).join(', ')}...`, 'Customer': '', 'Phone': '', 'Email': '', 'Location': '', 'Address': '', 'Zip Code': '', 'Project Type': '', 'Build Size': '', 'SQFT': null, 'Quote Sent': '', 'Reached Out': '', 'Quote (Material)': null, 'Quote (With Tax)': null, 'Quote Accepted': '', 'Deposit Paid': '', 'Drawings Status': '', 'Est. Metal Delivery': '', 'Metal Production': '', 'Metal Delivery': '', 'Door Delivery': '', 'Contractor Start': '', 'Job Status': '', 'Comments': '' });
-  
-  // Empty row before data
-  rows.push({ 'Category': '', 'Project Name': '', 'Customer': '', 'Phone': '', 'Email': '', 'Location': '', 'Address': '', 'Zip Code': '', 'Project Type': '', 'Build Size': '', 'SQFT': null, 'Quote Sent': '', 'Reached Out': '', 'Quote (Material)': null, 'Quote (With Tax)': null, 'Quote Accepted': '', 'Deposit Paid': '', 'Drawings Status': '', 'Est. Metal Delivery': '', 'Metal Production': '', 'Metal Delivery': '', 'Door Delivery': '', 'Contractor Start': '', 'Job Status': '', 'Comments': '' });
+  rows.push({ ...emptyRow(), 'Year': '📊 DASHBOARD SUMMARY' });
+  rows.push({ ...emptyRow(), 'Year': 'Total Projects', 'Stage': String(totalProjects), 'Project Name': 'Total Quote Value', 'Assigned To': `$${totalQuoteValue.toLocaleString()}` });
+  rows.push({ ...emptyRow(), 'Year': 'Quote Sent (Yes)', 'Stage': String(quoteSentYes), 'Project Name': 'Quote Sent (No)', 'Assigned To': String(quoteSentNo) });
+  rows.push({ ...emptyRow(), 'Year': 'Deposit Paid', 'Stage': String(depositPaidCount) });
+  rows.push(emptyRow());
 
-  // Category order
-  const categoryOrder = [
-    '2025 Active Projects',
-    '2025 Active Bids',
-    '2025 New Leads',
-    'Needs Clarification',
-    'Already Quoted',
-    'Pending Quotation',
-    'Ongoing Projects',
-    'No Status',
-  ];
-
-  categoryOrder.forEach((category) => {
-    const categoryProjects = categories[category];
-    if (categoryProjects.length > 0) {
-      // Calculate category totals
-      const categoryTotal = categoryProjects.reduce((sum, p) => sum + (p.ourQuoteWithTax || 0), 0);
+  // Add projects grouped by year
+  years.forEach((year) => {
+    const yearProjects = projectsByYear[year];
+    if (yearProjects.length > 0) {
+      // Calculate year totals
+      const yearTotal = yearProjects.reduce((sum, p) => sum + (p.ourQuoteWithTax || 0), 0);
       
-      // Add category parent row with summary
+      // Add year parent row with summary
       rows.push({ 
-        'Category': category, 
-        'Project Name': `${categoryProjects.length} projects`, 
-        'Customer': '', 
-        'Phone': '', 
-        'Email': '', 
-        'Location': '', 
-        'Address': '', 
-        'Zip Code': '', 
-        'Project Type': '', 
-        'Build Size': '', 
-        'SQFT': null, 
-        'Quote Sent': '', 
-        'Reached Out': '', 
-        'Quote (Material)': null, 
-        'Quote (With Tax)': categoryTotal > 0 ? categoryTotal : null, 
-        'Quote Accepted': '', 
-        'Deposit Paid': '', 
-        'Drawings Status': '', 
-        'Est. Metal Delivery': '', 
-        'Metal Production': '', 
-        'Metal Delivery': '', 
-        'Door Delivery': '', 
-        'Contractor Start': '', 
-        'Job Status': '', 
-        'Comments': '' 
+        ...emptyRow(),
+        'Year': `Projects ${year}`, 
+        'Stage': '', 
+        'Project Name': `${yearProjects.length} projects`, 
+        'Quote (With Tax)': yearTotal > 0 ? yearTotal : null,
       });
       
       // Add project rows (to be indented after import)
-      categoryProjects.forEach((project) => {
+      yearProjects.forEach((project) => {
         rows.push(projectToRow(project, ''));
       });
     }
@@ -158,8 +177,10 @@ export function exportProjectsToExcel(projects: Project[]): void {
   
   // Set column widths
   worksheet['!cols'] = [
-    { wch: 22 },  // Category
+    { wch: 15 },  // Year
+    { wch: 15 },  // Stage
     { wch: 45 },  // Project Name
+    { wch: 15 },  // Assigned To
     { wch: 20 },  // Customer
     { wch: 15 },  // Phone
     { wch: 25 },  // Email
@@ -190,8 +211,7 @@ export function exportProjectsToExcel(projects: Project[]): void {
   
   // Add Filter Options sheet
   const filterData = [
-    { 'Filter Type': 'Labels', 'Options': uniqueLabels.join('\n') },
-    { 'Filter Type': 'Statuses', 'Options': uniqueStatuses.join('\n') },
+    { 'Filter Type': 'Kanban Stages (Dropdown)', 'Options': kanbanStages.join('\n') },
     { 'Filter Type': 'States', 'Options': uniqueStates.join('\n') },
     { 'Filter Type': 'Customers (Top 50)', 'Options': uniqueCustomers.slice(0, 50).join('\n') },
   ];
@@ -206,27 +226,37 @@ export function exportProjectsToExcel(projects: Project[]): void {
     { 'Step': '1. Import this Excel file', 'Details': 'File > Import > Browse for this file' },
     { 'Step': '', 'Details': '' },
     { 'Step': '2. Create Hierarchy (Collapsible Groups)', 'Details': '' },
-    { 'Step': '   a. Find category rows', 'Details': 'Look for rows like "2025 Active Projects", "2025 Active Bids", etc.' },
-    { 'Step': '   b. Select child rows', 'Details': 'Select all project rows UNDER each category row' },
+    { 'Step': '   a. Find year rows', 'Details': 'Look for rows like "Projects 2025", "Projects 2024", etc.' },
+    { 'Step': '   b. Select child rows', 'Details': 'Select all project rows UNDER each year row' },
     { 'Step': '   c. Indent them', 'Details': 'Right-click > Indent (or press Ctrl + ])' },
-    { 'Step': '   d. Repeat for each category', 'Details': 'This creates the collapsible + buttons' },
+    { 'Step': '   d. Repeat for each year', 'Details': 'This creates the collapsible + buttons' },
     { 'Step': '', 'Details': '' },
-    { 'Step': '3. Set Up Filters', 'Details': '' },
-    { 'Step': '   a. Click Filter icon', 'Details': 'In the toolbar, click the Filter button' },
-    { 'Step': '   b. Add filters', 'Details': 'Filter by Category, Quote Sent, Location, etc.' },
-    { 'Step': '', 'Details': '' },
-    { 'Step': '4. Set Up Dropdown Columns (Optional)', 'Details': '' },
-    { 'Step': '   a. Right-click column header', 'Details': 'e.g., "Quote Sent" or "Deposit Paid"' },
+    { 'Step': '3. Set Up Stage Dropdown', 'Details': '' },
+    { 'Step': '   a. Right-click "Stage" column header', 'Details': '' },
     { 'Step': '   b. Edit Column Properties', 'Details': 'Change type to "Dropdown List"' },
-    { 'Step': '   c. Add values', 'Details': 'Use values from "Filter Options" sheet' },
+    { 'Step': '   c. Add these values:', 'Details': 'Unassigned, New Lead, Reached Out, Quote Sent, Quote Accepted, Deposit Paid, In Production, Delivered' },
     { 'Step': '', 'Details': '' },
-    { 'Step': '5. Switch to Card View (Optional)', 'Details': '' },
-    { 'Step': '   a. Click Card button', 'Details': 'In toolbar, next to Grid' },
-    { 'Step': '   b. Group by Category', 'Details': 'Click "View by..." dropdown > select Category' },
+    { 'Step': '4. Set Up Conditional Formatting (Row Colors)', 'Details': '' },
+    { 'Step': '   a. Click Format > Conditional Formatting', 'Details': '' },
+    { 'Step': '   b. Add rule for each stage:', 'Details': '' },
+    { 'Step': '      - Unassigned = Grey', 'Details': 'When Stage = "Unassigned", apply grey background' },
+    { 'Step': '      - New Lead = Blue', 'Details': 'When Stage = "New Lead", apply blue background' },
+    { 'Step': '      - Reached Out = Light Blue', 'Details': 'When Stage = "Reached Out", apply light blue background' },
+    { 'Step': '      - Quote Sent = Yellow', 'Details': 'When Stage = "Quote Sent", apply yellow background' },
+    { 'Step': '      - Quote Accepted = Green', 'Details': 'When Stage = "Quote Accepted", apply green background' },
+    { 'Step': '      - Deposit Paid = Dark Green', 'Details': 'When Stage = "Deposit Paid", apply dark green background' },
+    { 'Step': '      - In Production = Orange', 'Details': 'When Stage = "In Production", apply orange background' },
+    { 'Step': '      - Delivered = Brown', 'Details': 'When Stage = "Delivered", apply brown background' },
     { 'Step': '', 'Details': '' },
-    { 'Step': '📊 DASHBOARD SUMMARY (Rows 1-4)', 'Details': 'Shows total projects, quote values, and key stats' },
-    { 'Step': '🔍 FILTER OPTIONS (Rows 6-10)', 'Details': 'Reference for available filter values' },
-    { 'Step': '📁 CATEGORY ROWS', 'Details': 'Parent rows showing project count and total quote value per category' },
+    { 'Step': '5. Set Up Filters', 'Details': '' },
+    { 'Step': '   a. Click Filter icon', 'Details': 'In the toolbar, click the Filter button' },
+    { 'Step': '   b. Add filters', 'Details': 'Filter by Year, Stage, Location, Assigned To, etc.' },
+    { 'Step': '', 'Details': '' },
+    { 'Step': '📊 COLUMNS EXPLAINED', 'Details': '' },
+    { 'Step': '   Year', 'Details': 'Project year (extracted from label, dates, or row position)' },
+    { 'Step': '   Stage', 'Details': 'Kanban stage - use dropdown to change status' },
+    { 'Step': '   Project Name', 'Details': 'Cleaned project name (contact removed)' },
+    { 'Step': '   Assigned To', 'Details': 'Contact extracted from project title (e.g., Toni, Austin)' },
   ];
   const instructionsSheet = XLSX.utils.json_to_sheet(instructions);
   instructionsSheet['!cols'] = [{ wch: 35 }, { wch: 60 }];

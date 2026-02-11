@@ -1,33 +1,7 @@
 import * as XLSX from 'xlsx';
 import { Project } from './types';
 
-interface ExportRow {
-  'Category': string;
-  'Project Name': string;
-  'Customer': string;
-  'Phone': string;
-  'Email': string;
-  'Location': string;
-  'Address': string;
-  'Zip Code': string;
-  'Project Type': string;
-  'Build Size': string;
-  'SQFT': number | null;
-  'Quote Sent': string;
-  'Reached Out': string;
-  'Quote (Material)': number | null;
-  'Quote (With Tax)': number | null;
-  'Quote Accepted': string;
-  'Deposit Paid': string;
-  'Drawings Status': string;
-  'Est. Metal Delivery': string;
-  'Metal Production': string;
-  'Metal Delivery': string;
-  'Door Delivery': string;
-  'Contractor Start': string;
-  'Job Status': string;
-  'Comments': string;
-}
+type ExportRow = Record<string, string | number | null>;
 
 function categorizeProject(project: Project): string {
   // Check label first
@@ -93,8 +67,39 @@ export function exportProjectsToExcel(projects: Project[]): void {
     categories[category].push(project);
   });
 
-  // Build rows with hierarchy
+  // Calculate stats
+  const totalProjects = projects.length;
+  const totalQuoteValue = projects.reduce((sum, p) => sum + (p.ourQuoteWithTax || 0), 0);
+  const quoteSentYes = projects.filter(p => p.quoteSent).length;
+  const quoteSentNo = projects.filter(p => !p.quoteSent).length;
+  const depositPaid = projects.filter(p => p.depositPaid === 'Paid').length;
+  
+  // Get unique values for filters
+  const uniqueLabels = [...new Set(projects.map(p => p.projectLabel).filter(Boolean))];
+  const uniqueStatuses = [...new Set(projects.map(p => p.colorStatus).filter(Boolean))];
+  const uniqueStates = [...new Set(projects.map(p => p.location).filter(Boolean))].sort();
+  const uniqueCustomers = [...new Set(projects.map(p => p.customer).filter(Boolean))].sort().slice(0, 20);
+
+  // Build rows
   const rows: ExportRow[] = [];
+  
+  // Dashboard Summary Section
+  rows.push({ 'Category': '📊 DASHBOARD SUMMARY', 'Project Name': '', 'Customer': '', 'Phone': '', 'Email': '', 'Location': '', 'Address': '', 'Zip Code': '', 'Project Type': '', 'Build Size': '', 'SQFT': null, 'Quote Sent': '', 'Reached Out': '', 'Quote (Material)': null, 'Quote (With Tax)': null, 'Quote Accepted': '', 'Deposit Paid': '', 'Drawings Status': '', 'Est. Metal Delivery': '', 'Metal Production': '', 'Metal Delivery': '', 'Door Delivery': '', 'Contractor Start': '', 'Job Status': '', 'Comments': '' });
+  rows.push({ 'Category': 'Total Projects', 'Project Name': String(totalProjects), 'Customer': 'Total Quote Value', 'Phone': `$${totalQuoteValue.toLocaleString()}`, 'Email': '', 'Location': '', 'Address': '', 'Zip Code': '', 'Project Type': '', 'Build Size': '', 'SQFT': null, 'Quote Sent': '', 'Reached Out': '', 'Quote (Material)': null, 'Quote (With Tax)': null, 'Quote Accepted': '', 'Deposit Paid': '', 'Drawings Status': '', 'Est. Metal Delivery': '', 'Metal Production': '', 'Metal Delivery': '', 'Door Delivery': '', 'Contractor Start': '', 'Job Status': '', 'Comments': '' });
+  rows.push({ 'Category': 'Quote Sent (Yes)', 'Project Name': String(quoteSentYes), 'Customer': 'Quote Sent (No)', 'Phone': String(quoteSentNo), 'Email': '', 'Location': '', 'Address': '', 'Zip Code': '', 'Project Type': '', 'Build Size': '', 'SQFT': null, 'Quote Sent': '', 'Reached Out': '', 'Quote (Material)': null, 'Quote (With Tax)': null, 'Quote Accepted': '', 'Deposit Paid': '', 'Drawings Status': '', 'Est. Metal Delivery': '', 'Metal Production': '', 'Metal Delivery': '', 'Door Delivery': '', 'Contractor Start': '', 'Job Status': '', 'Comments': '' });
+  rows.push({ 'Category': 'Deposit Paid', 'Project Name': String(depositPaid), 'Customer': '', 'Phone': '', 'Email': '', 'Location': '', 'Address': '', 'Zip Code': '', 'Project Type': '', 'Build Size': '', 'SQFT': null, 'Quote Sent': '', 'Reached Out': '', 'Quote (Material)': null, 'Quote (With Tax)': null, 'Quote Accepted': '', 'Deposit Paid': '', 'Drawings Status': '', 'Est. Metal Delivery': '', 'Metal Production': '', 'Metal Delivery': '', 'Door Delivery': '', 'Contractor Start': '', 'Job Status': '', 'Comments': '' });
+  
+  // Filter Options Row
+  rows.push({ 'Category': '', 'Project Name': '', 'Customer': '', 'Phone': '', 'Email': '', 'Location': '', 'Address': '', 'Zip Code': '', 'Project Type': '', 'Build Size': '', 'SQFT': null, 'Quote Sent': '', 'Reached Out': '', 'Quote (Material)': null, 'Quote (With Tax)': null, 'Quote Accepted': '', 'Deposit Paid': '', 'Drawings Status': '', 'Est. Metal Delivery': '', 'Metal Production': '', 'Metal Delivery': '', 'Door Delivery': '', 'Contractor Start': '', 'Job Status': '', 'Comments': '' });
+  rows.push({ 'Category': '🔍 FILTER OPTIONS', 'Project Name': `Labels: ${uniqueLabels.join(', ')}`, 'Customer': '', 'Phone': '', 'Email': '', 'Location': '', 'Address': '', 'Zip Code': '', 'Project Type': '', 'Build Size': '', 'SQFT': null, 'Quote Sent': '', 'Reached Out': '', 'Quote (Material)': null, 'Quote (With Tax)': null, 'Quote Accepted': '', 'Deposit Paid': '', 'Drawings Status': '', 'Est. Metal Delivery': '', 'Metal Production': '', 'Metal Delivery': '', 'Door Delivery': '', 'Contractor Start': '', 'Job Status': '', 'Comments': '' });
+  rows.push({ 'Category': '', 'Project Name': `Statuses: ${uniqueStatuses.join(', ')}`, 'Customer': '', 'Phone': '', 'Email': '', 'Location': '', 'Address': '', 'Zip Code': '', 'Project Type': '', 'Build Size': '', 'SQFT': null, 'Quote Sent': '', 'Reached Out': '', 'Quote (Material)': null, 'Quote (With Tax)': null, 'Quote Accepted': '', 'Deposit Paid': '', 'Drawings Status': '', 'Est. Metal Delivery': '', 'Metal Production': '', 'Metal Delivery': '', 'Door Delivery': '', 'Contractor Start': '', 'Job Status': '', 'Comments': '' });
+  rows.push({ 'Category': '', 'Project Name': `States: ${uniqueStates.slice(0, 15).join(', ')}...`, 'Customer': '', 'Phone': '', 'Email': '', 'Location': '', 'Address': '', 'Zip Code': '', 'Project Type': '', 'Build Size': '', 'SQFT': null, 'Quote Sent': '', 'Reached Out': '', 'Quote (Material)': null, 'Quote (With Tax)': null, 'Quote Accepted': '', 'Deposit Paid': '', 'Drawings Status': '', 'Est. Metal Delivery': '', 'Metal Production': '', 'Metal Delivery': '', 'Door Delivery': '', 'Contractor Start': '', 'Job Status': '', 'Comments': '' });
+  rows.push({ 'Category': '', 'Project Name': `Customers: ${uniqueCustomers.slice(0, 10).join(', ')}...`, 'Customer': '', 'Phone': '', 'Email': '', 'Location': '', 'Address': '', 'Zip Code': '', 'Project Type': '', 'Build Size': '', 'SQFT': null, 'Quote Sent': '', 'Reached Out': '', 'Quote (Material)': null, 'Quote (With Tax)': null, 'Quote Accepted': '', 'Deposit Paid': '', 'Drawings Status': '', 'Est. Metal Delivery': '', 'Metal Production': '', 'Metal Delivery': '', 'Door Delivery': '', 'Contractor Start': '', 'Job Status': '', 'Comments': '' });
+  
+  // Empty row before data
+  rows.push({ 'Category': '', 'Project Name': '', 'Customer': '', 'Phone': '', 'Email': '', 'Location': '', 'Address': '', 'Zip Code': '', 'Project Type': '', 'Build Size': '', 'SQFT': null, 'Quote Sent': '', 'Reached Out': '', 'Quote (Material)': null, 'Quote (With Tax)': null, 'Quote Accepted': '', 'Deposit Paid': '', 'Drawings Status': '', 'Est. Metal Delivery': '', 'Metal Production': '', 'Metal Delivery': '', 'Door Delivery': '', 'Contractor Start': '', 'Job Status': '', 'Comments': '' });
+
+  // Category order
   const categoryOrder = [
     '2025 Active Projects',
     '2025 Active Bids',
@@ -109,9 +114,41 @@ export function exportProjectsToExcel(projects: Project[]): void {
   categoryOrder.forEach((category) => {
     const categoryProjects = categories[category];
     if (categoryProjects.length > 0) {
-      // Add project rows with category
+      // Calculate category totals
+      const categoryTotal = categoryProjects.reduce((sum, p) => sum + (p.ourQuoteWithTax || 0), 0);
+      
+      // Add category parent row with summary
+      rows.push({ 
+        'Category': category, 
+        'Project Name': `${categoryProjects.length} projects`, 
+        'Customer': '', 
+        'Phone': '', 
+        'Email': '', 
+        'Location': '', 
+        'Address': '', 
+        'Zip Code': '', 
+        'Project Type': '', 
+        'Build Size': '', 
+        'SQFT': null, 
+        'Quote Sent': '', 
+        'Reached Out': '', 
+        'Quote (Material)': null, 
+        'Quote (With Tax)': categoryTotal > 0 ? categoryTotal : null, 
+        'Quote Accepted': '', 
+        'Deposit Paid': '', 
+        'Drawings Status': '', 
+        'Est. Metal Delivery': '', 
+        'Metal Production': '', 
+        'Metal Delivery': '', 
+        'Door Delivery': '', 
+        'Contractor Start': '', 
+        'Job Status': '', 
+        'Comments': '' 
+      });
+      
+      // Add project rows (to be indented after import)
       categoryProjects.forEach((project) => {
-        rows.push(projectToRow(project, category));
+        rows.push(projectToRow(project, ''));
       });
     }
   });
@@ -121,7 +158,7 @@ export function exportProjectsToExcel(projects: Project[]): void {
   
   // Set column widths
   worksheet['!cols'] = [
-    { wch: 20 },  // Category
+    { wch: 22 },  // Category
     { wch: 45 },  // Project Name
     { wch: 20 },  // Customer
     { wch: 15 },  // Phone
@@ -150,6 +187,17 @@ export function exportProjectsToExcel(projects: Project[]): void {
 
   const workbook = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(workbook, worksheet, 'Projects');
+  
+  // Add Filter Options sheet
+  const filterData = [
+    { 'Filter Type': 'Labels', 'Options': uniqueLabels.join('\n') },
+    { 'Filter Type': 'Statuses', 'Options': uniqueStatuses.join('\n') },
+    { 'Filter Type': 'States', 'Options': uniqueStates.join('\n') },
+    { 'Filter Type': 'Customers (Top 50)', 'Options': uniqueCustomers.slice(0, 50).join('\n') },
+  ];
+  const filterSheet = XLSX.utils.json_to_sheet(filterData);
+  filterSheet['!cols'] = [{ wch: 20 }, { wch: 50 }];
+  XLSX.utils.book_append_sheet(workbook, filterSheet, 'Filter Options');
 
   // Generate filename with date
   const date = new Date().toISOString().split('T')[0];

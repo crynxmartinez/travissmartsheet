@@ -57,14 +57,26 @@ function extractContactFromTitle(projectName: string): { cleanName: string; assi
 
 // Determine Kanban stage from project data
 function getKanbanStage(project: Project): string {
-  // Check from most advanced stage to least
-  if (project.metalDelivery || project.doorDelivery) return 'Delivered';
-  if (project.metalProduction) return 'In Production';
-  if (project.depositPaid === 'Paid') return 'Deposit Paid';
-  if (project.quoteAcceptedDeclined?.toLowerCase().includes('accept')) return 'Quote Accepted';
-  if (project.quoteSent) return 'Quote Sent';
-  if (project.reachedOut) return 'Reached Out';
-  if (project.projectLabel?.includes('New Lead')) return 'New Lead';
+  // Signed = closed/won/active execution
+  if (project.depositPaid === 'Paid') return 'Signed';
+  if (project.quoteAcceptedDeclined?.toLowerCase().includes('accept')) return 'Signed';
+  if (project.projectLabel === '2025 Active project') return 'Signed';
+  if (project.metalProduction || project.metalDelivery || project.doorDelivery) return 'Signed';
+  if (project.colorStatus?.includes('Brown') || project.colorStatus?.includes('Ongoing')) return 'Signed';
+
+  // Hot Leads = active quoting/bidding, close to conversion
+  if (project.projectLabel === '2025 Active Bid') return 'Hot Leads';
+  if (project.quoteSent) return 'Hot Leads';
+  if (project.colorStatus?.includes('Green') || project.colorStatus?.includes('Already Quoted')) return 'Hot Leads';
+
+  // Warm Leads = early engagement/new lead
+  if (project.projectLabel?.includes('New Lead')) return 'Warm Leads';
+  if (project.reachedOut) return 'Warm Leads';
+  if (project.colorStatus?.includes('Yellow') || project.colorStatus?.includes('Quotation')) return 'Warm Leads';
+
+  // Unassigned/unclear
+  if (project.colorStatus?.includes('Red') || project.colorStatus?.includes('Needs Clarification')) return 'Unassigned';
+  if (project.customer) return 'Warm Leads';
   return 'Unassigned';
 }
 
@@ -132,7 +144,7 @@ export function exportProjectsToExcel(projects: Project[]): void {
   const uniqueCustomers = [...new Set(projects.map(p => p.customer).filter(Boolean))].sort().slice(0, 20);
   
   // Kanban stages for dropdown
-  const kanbanStages = ['Unassigned', 'New Lead', 'Reached Out', 'Quote Sent', 'Quote Accepted', 'Deposit Paid', 'In Production', 'Delivered'];
+  const kanbanStages = ['Signed', 'Hot Leads', 'Warm Leads', 'Unassigned'];
 
   // Build rows
   const rows: ExportRow[] = [];
@@ -234,19 +246,15 @@ export function exportProjectsToExcel(projects: Project[]): void {
     { 'Step': '3. Set Up Stage Dropdown', 'Details': '' },
     { 'Step': '   a. Right-click "Stage" column header', 'Details': '' },
     { 'Step': '   b. Edit Column Properties', 'Details': 'Change type to "Dropdown List"' },
-    { 'Step': '   c. Add these values:', 'Details': 'Unassigned, New Lead, Reached Out, Quote Sent, Quote Accepted, Deposit Paid, In Production, Delivered' },
+    { 'Step': '   c. Add these values:', 'Details': 'Signed, Hot Leads, Warm Leads, Unassigned' },
     { 'Step': '', 'Details': '' },
     { 'Step': '4. Set Up Conditional Formatting (Row Colors)', 'Details': '' },
     { 'Step': '   a. Click Format > Conditional Formatting', 'Details': '' },
     { 'Step': '   b. Add rule for each stage:', 'Details': '' },
+    { 'Step': '      - Signed = Green', 'Details': 'When Stage = "Signed", apply green background' },
+    { 'Step': '      - Hot Leads = Orange', 'Details': 'When Stage = "Hot Leads", apply orange background' },
+    { 'Step': '      - Warm Leads = Blue', 'Details': 'When Stage = "Warm Leads", apply blue background' },
     { 'Step': '      - Unassigned = Grey', 'Details': 'When Stage = "Unassigned", apply grey background' },
-    { 'Step': '      - New Lead = Blue', 'Details': 'When Stage = "New Lead", apply blue background' },
-    { 'Step': '      - Reached Out = Light Blue', 'Details': 'When Stage = "Reached Out", apply light blue background' },
-    { 'Step': '      - Quote Sent = Yellow', 'Details': 'When Stage = "Quote Sent", apply yellow background' },
-    { 'Step': '      - Quote Accepted = Green', 'Details': 'When Stage = "Quote Accepted", apply green background' },
-    { 'Step': '      - Deposit Paid = Dark Green', 'Details': 'When Stage = "Deposit Paid", apply dark green background' },
-    { 'Step': '      - In Production = Orange', 'Details': 'When Stage = "In Production", apply orange background' },
-    { 'Step': '      - Delivered = Brown', 'Details': 'When Stage = "Delivered", apply brown background' },
     { 'Step': '', 'Details': '' },
     { 'Step': '5. Set Up Filters', 'Details': '' },
     { 'Step': '   a. Click Filter icon', 'Details': 'In the toolbar, click the Filter button' },

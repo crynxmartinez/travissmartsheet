@@ -22,7 +22,7 @@ interface KanbanBoardProps {
   projects: Project[];
 }
 
-type ColumnId = "unassigned" | "new_lead" | "quoted" | "accepted" | "deposit_paid" | "in_progress" | "completed" | "needs_attention" | "no_status";
+type ColumnId = "signed" | "hot_leads" | "warm_leads" | "unassigned";
 
 interface Column {
   id: ColumnId;
@@ -31,51 +31,44 @@ interface Column {
 }
 
 const columns: Column[] = [
-  { id: "unassigned", title: "Unassigned", color: "bg-gray-400 text-white" },
-  { id: "new_lead", title: "New Lead", color: "bg-blue-500 text-white" },
-  { id: "quoted", title: "Quoted", color: "bg-green-500 text-white" },
-  { id: "needs_attention", title: "Needs Attention", color: "bg-red-500 text-white" },
-  { id: "accepted", title: "Accepted", color: "bg-emerald-600 text-white" },
-  { id: "deposit_paid", title: "Deposit Paid", color: "bg-purple-500 text-white" },
-  { id: "in_progress", title: "In Progress", color: "bg-amber-600 text-white" },
+  { id: "signed", title: "Signed", color: "bg-emerald-600 text-white" },
+  { id: "hot_leads", title: "Hot Leads", color: "bg-orange-500 text-white" },
+  { id: "warm_leads", title: "Warm Leads", color: "bg-blue-500 text-white" },
+  { id: "unassigned", title: "Unassigned", color: "bg-gray-500 text-white" },
 ];
 
 function getProjectColumn(project: Project): ColumnId {
-  // Check project label first
-  if (project.projectLabel === "2025 New Lead") return "new_lead";
-  if (project.projectLabel === "2025 Active Bid") return "quoted";
-  if (project.projectLabel === "2025 Active project") return "in_progress";
-  
-  // Check color status
-  if (project.colorStatus?.includes("Green") || project.colorStatus?.includes("Already Quoted")) return "quoted";
-  if (project.colorStatus?.includes("Red") || project.colorStatus?.includes("Needs Clarification")) return "needs_attention";
-  if (project.colorStatus?.includes("Yellow") || project.colorStatus?.includes("Quotation")) return "new_lead";
-  if (project.colorStatus?.includes("Brown") || project.colorStatus?.includes("Ongoing")) return "in_progress";
-  
-  // Check deposit status
-  if (project.depositPaid === "Paid") return "deposit_paid";
-  
-  // Check quote accepted
-  if (project.quoteAcceptedDeclined?.toLowerCase() === "accepted") return "accepted";
-  
-  // Default to new lead if has customer, otherwise unassigned (grey)
-  if (project.customer) return "new_lead";
-  
+  // Signed = accepted/deposit/active project/production-delivery states
+  if (project.depositPaid === "Paid") return "signed";
+  if (project.quoteAcceptedDeclined?.toLowerCase().includes("accept")) return "signed";
+  if (project.projectLabel === "2025 Active project") return "signed";
+  if (project.metalProduction || project.metalDelivery || project.doorDelivery) return "signed";
+  if (project.colorStatus?.includes("Brown") || project.colorStatus?.includes("Ongoing")) return "signed";
+
+  // Hot Leads = actively quoting/bidding and close to conversion
+  if (project.projectLabel === "2025 Active Bid") return "hot_leads";
+  if (project.quoteSent) return "hot_leads";
+  if (project.colorStatus?.includes("Green") || project.colorStatus?.includes("Already Quoted")) return "hot_leads";
+
+  // Warm Leads = active early conversations / new leads
+  if (project.projectLabel === "2025 New Lead") return "warm_leads";
+  if (project.reachedOut) return "warm_leads";
+  if (project.colorStatus?.includes("Yellow") || project.colorStatus?.includes("Quotation")) return "warm_leads";
+
+  // Unassigned = no clear stage or needs clarification
+  if (project.colorStatus?.includes("Red") || project.colorStatus?.includes("Needs Clarification")) return "unassigned";
+  if (project.customer) return "warm_leads";
+
   return "unassigned";
 }
 
 export function KanbanBoard({ projects }: KanbanBoardProps) {
   // Initialize columns with projects
   const initialColumnProjects: Record<ColumnId, Project[]> = {
+    signed: [],
+    hot_leads: [],
+    warm_leads: [],
     unassigned: [],
-    new_lead: [],
-    quoted: [],
-    needs_attention: [],
-    accepted: [],
-    deposit_paid: [],
-    in_progress: [],
-    completed: [],
-    no_status: [],
   };
 
   projects.forEach((project) => {
